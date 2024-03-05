@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginDashboard">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest/LoginDashboard.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="390.0" layoutY="193.0" mnemonicParsing="false" onAction="#adminbtnOnAction" prefHeight="20.0" prefWidth="98.0" style="-fx-background-color: #0a1747; -fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="Admin" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-admin-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="391.0" layoutY="254.0" mnemonicParsing="false" onAction="#userbtnOnAction" prefHeight="15.0" prefWidth="98.0" style="-fx-background-color: #0a1747; -fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="User" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-users-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Line endX="100.0" layoutX="439.0" layoutY="241.0" startX="-100.0" stroke="#0a1747" />
+   </children>
+</AnchorPane>

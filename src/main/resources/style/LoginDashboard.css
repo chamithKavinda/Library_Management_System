@@ -1,0 +1,9 @@
+.loginDashboard-button{
+    -fx-background-color: #0a1747;
+    -fx-text-fill: #ffffff;
+}
+
+.loginDashboard-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #FF9F17;
+}
