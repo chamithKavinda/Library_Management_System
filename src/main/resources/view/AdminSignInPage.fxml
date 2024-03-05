@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AdminSignInPage">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
@@ -17,7 +16,7 @@
             <Image url="@../assest/AdminSignInPage.jpg" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="99.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="99.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin name" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -36,7 +35,7 @@
       </Button>
       <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="103.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../assest/icons8-username-30.png" />
+            <Image url="@../assest/icons8-admin-32.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="103.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
