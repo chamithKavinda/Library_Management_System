@@ -5,7 +5,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="732.0" prefWidth="1375.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserDashboardFormController">
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="732.0" prefWidth="261.0">
@@ -55,6 +54,15 @@
                   </ImageView>
                </graphic>
             </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="381.0" layoutY="17.0" prefHeight="46.0" prefWidth="959.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="153.0" layoutX="777.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Logo.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

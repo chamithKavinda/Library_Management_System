@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="732.0" prefWidth="1375.0" style="-fx-background-color: #FFF1E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardFormController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="2.0" prefHeight="732.0" prefWidth="261.0" />
+      <Button layoutX="30.0" layoutY="99.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Dashboard">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-dashboard-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="30.0" layoutY="192.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Users">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-users-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="30.0" layoutY="289.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Books">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-bookstore-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="34.0" layoutY="386.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Records">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-moleskine-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="34.0" layoutY="482.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Branches">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-active-directory-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="35.0" layoutY="575.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Log Out">
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/icons8-log-out-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="391.0" layoutY="27.0" prefHeight="46.0" prefWidth="959.0">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="153.0" layoutX="777.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/Logo%20(1).jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
