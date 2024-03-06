@@ -1,0 +1,16 @@
+.Crud-button{
+    -fx-background-color: #0A1747;
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-padding: 2px 2px;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.Crud-button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #f9cb40;
+}
+
+.Crud-button:pressed{
+    -fx-background-color: #f56600;
+}
