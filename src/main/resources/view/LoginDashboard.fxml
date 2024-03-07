@@ -13,7 +13,7 @@
             <Image url="@../assest/LoginDashboard.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="390.0" layoutY="193.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="98.0" style="-fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="Admin" textFill="WHITE">
+      <Button layoutX="390.0" layoutY="193.0" mnemonicParsing="false" onAction="#btnAdminOnAction" prefHeight="20.0" prefWidth="98.0" style="-fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="Admin" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -22,7 +22,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="391.0" layoutY="254.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="98.0" style="-fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="User" textFill="WHITE">
+      <Button layoutX="391.0" layoutY="254.0" mnemonicParsing="false" onAction="#btnUserOnAction" prefHeight="15.0" prefWidth="98.0" style="-fx-background-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../style/LoginDashboard.css" text="User" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
