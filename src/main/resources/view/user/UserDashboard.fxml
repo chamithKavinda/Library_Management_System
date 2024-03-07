@@ -9,47 +9,47 @@
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="732.0" prefWidth="261.0">
          <children>
-            <Button layoutX="20.0" layoutY="139.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Dashboard">
+            <Button layoutX="20.0" layoutY="139.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Dashboard">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assest/icons8-dashboard-48.png" />
+                        <Image url="@../../assest/icons8-dashboard-48.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="20.0" layoutY="232.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Books">
+            <Button layoutX="20.0" layoutY="232.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Books">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assest/icons8-bookstore-32.png" />
+                        <Image url="@../../assest/icons8-bookstore-32.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="20.0" layoutY="329.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="History">
+            <Button layoutX="20.0" layoutY="329.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="History">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assest/icons8-history-50.png" />
+                        <Image url="@../../assest/icons8-history-50.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="24.0" layoutY="425.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Settings">
+            <Button layoutX="24.0" layoutY="425.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Settings">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assest/icons8-settings-50.png" />
+                        <Image url="@../../assest/icons8-settings-50.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="25.0" layoutY="525.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../style/DashboardButton.css" text="Log Out">
+            <Button layoutX="25.0" layoutY="525.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Log Out">
                <graphic>
                   <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../assest/icons8-log-out-50.png" />
+                        <Image url="@../../assest/icons8-log-out-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -60,7 +60,7 @@
          <children>
             <ImageView fitHeight="100.0" fitWidth="153.0" layoutX="777.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assest/Logo.jpg" />
+                  <Image url="@../../assest/Logo.jpg" />
                </image>
             </ImageView>
          </children>
