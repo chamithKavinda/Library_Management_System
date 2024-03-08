@@ -1,5 +1,8 @@
 .table-view {
     -fx-background-color: #f5f5f5;
+    -fx-border-color: #F9978D;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
 }
 
 .column-header{
