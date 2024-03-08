@@ -1,0 +1,27 @@
+.table-view {
+    -fx-background-color: #f5f5f5;
+}
+
+.column-header{
+    -fx-background-color: #FA8D82;
+    -fx-font-weight: bold;
+    -fx-font: 5px;
+}
+
+.table-cell{
+    -fx-alignment: CENTER;
+    -fx-padding: 5px;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FCB9B2;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #FA8D82;
+}
