@@ -2,6 +2,7 @@ package lk.ijse;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -12,10 +13,11 @@ public class AppInitializer extends Application  {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginDashboard.fxml"))));
-        stage.setTitle("Login Dashboard");
-        stage.initStyle(StageStyle.UNDECORATED);
+        Parent rootNode = FXMLLoader.load(getClass().getResource("/view/LoginDashboard.fxml"));
+        Scene scene = new Scene(rootNode);
+        stage.setScene(scene);
         stage.centerOnScreen();
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 }
