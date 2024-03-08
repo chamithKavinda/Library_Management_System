@@ -26,7 +26,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="txtAdminname" alignment="CENTER" layoutX="97.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtAdminName" alignment="CENTER" layoutX="97.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtPassword" alignment="CENTER" layoutX="98.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
       <Button layoutX="140.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnAdminSignInOnaction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
          <font>
@@ -48,7 +48,7 @@
             <Font size="11.0" />
          </font>
       </Text>
-      <Hyperlink layoutX="213.0" layoutY="309.0" onAction="#hyperAdminSignInOnAction" text="Sign Up" textFill="#0a1747">
+      <Hyperlink layoutX="213.0" layoutY="309.0" onAction="#hyperAdminSignUpOnAction" text="Sign Up" textFill="#0a1747">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

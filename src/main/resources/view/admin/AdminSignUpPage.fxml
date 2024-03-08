@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminSignUpFormController">
+<AnchorPane fx:id="AdminSignUpPage" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminSignUpFormController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,15 +31,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="91.0" layoutY="171.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="91.0" layoutY="228.0" stylesheets="@../../style/textField.css" />
-      <Button layoutX="125.0" layoutY="326.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
+      <TextField fx:id="txtAdminName" alignment="CENTER" layoutX="91.0" layoutY="171.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtAdminEmail" alignment="CENTER" layoutX="91.0" layoutY="228.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="125.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnAdminSignUpOnAction" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="43.0" layoutY="354.0" text="Back to Sign in" textFill="#0a1747" />
-      <TextField alignment="CENTER" layoutX="90.0" layoutY="284.0" stylesheets="@../../style/textField.css" />
+      <Hyperlink layoutX="43.0" layoutY="354.0" onAction="#hyperAdminSignInOnAction" text="Back to Sign in" textFill="#0a1747" />
+      <TextField fx:id="txtAdminPassword" alignment="CENTER" layoutX="90.0" layoutY="284.0" stylesheets="@../../style/textField.css" />
       <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="95.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-admin-32.png" />
@@ -60,7 +60,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="91.0" layoutY="115.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtAdminId" alignment="CENTER" layoutX="91.0" layoutY="115.0" stylesheets="@../../style/textField.css" />
       <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="95.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-id-48.png" />
