@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminBooksFormController">
+   <children>
+      <ImageView fitHeight="634.0" fitWidth="1086.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/UsersForm.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#0a1747" layoutX="102.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books Manage" wrappingWidth="283.13671875">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="138.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="138.0" layoutY="372.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genre*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="137.0" layoutY="490.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-add-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="257.0" layoutY="490.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-update-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="136.0" layoutY="534.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="257.0" layoutY="534.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-clear-50.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#0a1747" layoutX="137.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="136.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField alignment="CENTER" layoutX="136.0" layoutY="187.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField alignment="CENTER" layoutX="135.0" layoutY="248.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField alignment="CENTER" layoutX="136.0" layoutY="313.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField alignment="CENTER" layoutX="136.0" layoutY="376.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TableView layoutX="479.0" layoutY="124.0" prefHeight="476.0" prefWidth="575.0" stylesheets="@../../style/TableView.css">
+         <columns>
+            <TableColumn text="Book Id" />
+            <TableColumn prefWidth="120.0" text="Title" />
+            <TableColumn prefWidth="120.0" text="Author" />
+            <TableColumn prefWidth="120.0" text="Genre" />
+            <TableColumn prefWidth="120.0" text="Status" />
+         </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <Text fill="#0a1747" layoutX="139.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <TextField alignment="CENTER" layoutX="137.0" layoutY="439.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="141.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-id-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="141.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-title-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="141.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-author-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="142.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-g-32.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="142.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-status-50.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
