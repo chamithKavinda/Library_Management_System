@@ -15,9 +15,8 @@ import javax.persistence.*;
 public class Admin {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "admin_id")
-    private int id;
+    @Column(name = "admin_id", length = 30)
+    private String id;
 
     @Column(name = "admin_name")
     private String name;

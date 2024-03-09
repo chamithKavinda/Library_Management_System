@@ -13,7 +13,7 @@ public class SessionFactoryConfig {
     private final SessionFactory sessionFactory;
 
     private SessionFactoryConfig() {
-        StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().loadProperties("hibernate.cfg.xml").build();
+        StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
         Metadata metadata = new MetadataSources(serviceRegistry)
                 .addAnnotatedClass(Admin.class)
                 .getMetadataBuilder()

@@ -41,7 +41,7 @@ public class AdminSignUpFormController {
             if (!adminCheck) {
                 AdminDto dto = new AdminDto();
 
-                dto.setId(Integer.parseInt(txtAdminId.getId()));
+                dto.setId(txtAdminId.getText());
                 dto.setName(txtAdminName.getText());
                 dto.setEmail(txtAdminEmail.getText());
                 dto.setPassword(txtAdminPassword.getText());
