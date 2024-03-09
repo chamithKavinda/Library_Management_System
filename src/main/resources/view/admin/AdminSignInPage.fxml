@@ -27,7 +27,7 @@
          </font>
       </Text>
       <TextField fx:id="txtAdminName" alignment="CENTER" layoutX="97.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtPassword" alignment="CENTER" layoutX="98.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtAdminPassword" alignment="CENTER" layoutX="98.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
       <Button layoutX="140.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnAdminSignInOnaction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
          <font>
             <Font name="System Bold" size="12.0" />

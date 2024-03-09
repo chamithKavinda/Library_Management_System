@@ -56,7 +56,15 @@ public class AdminSignUpFormController {
         } catch (SQLException | ClassNotFoundException throwables ){
             throwables.printStackTrace();
         }
+        clearFields();
 
+    }
+
+    private void clearFields() {
+        txtAdminId.setText("");
+        txtAdminName.setText("");
+        txtAdminEmail.setText("");
+        txtAdminPassword.setText("");
     }
 
     @FXML

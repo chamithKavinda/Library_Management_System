@@ -13,5 +13,5 @@ public interface AdminDAO extends CrudDAO<Admin> {
 
     String getEmail(String Email)throws SQLException, ClassNotFoundException;
 
-     boolean exist(String AdminName, String Password)throws SQLException, ClassNotFoundException;
+     boolean exist(String AdminName, String adminPassword)throws SQLException, ClassNotFoundException;
 }

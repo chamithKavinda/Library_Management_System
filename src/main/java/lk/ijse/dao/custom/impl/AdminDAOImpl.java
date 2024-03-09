@@ -42,8 +42,23 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
-    public boolean exist(String AdminName, String Password) throws SQLException, ClassNotFoundException {
-        return false;
+    public boolean exist(String AdminName, String AdminPassword) throws SQLException, ClassNotFoundException {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        try  {
+            String hql = "SELECT COUNT(*) FROM Admin WHERE admin_name = :username AND admin_password = :password";
+            Query<Long> query = session.createQuery(hql, Long.class);
+            query.setParameter("username", AdminName);
+            query.setParameter("password", AdminPassword);
+
+            Long count = query.uniqueResult();
+            return count != null && count > 0;
+        } catch (Exception e) {
+            // Handle exceptions
+            e.printStackTrace();
+            return false;
+        }
     }
+
+
 
 }

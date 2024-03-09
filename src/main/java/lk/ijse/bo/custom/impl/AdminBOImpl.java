@@ -26,7 +26,7 @@ public class AdminBOImpl implements AdminBO {
     }
 
     @Override
-    public boolean isExistAdmin(String AdminName, String Password)throws SQLException, ClassNotFoundException{
-        return adminDAO.exist(AdminName,Password);
+    public boolean isExistAdmin(String AdminName, String AdminPassword)throws SQLException, ClassNotFoundException{
+        return adminDAO.exist(AdminName,AdminPassword);
     }
 }

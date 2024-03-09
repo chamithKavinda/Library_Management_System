@@ -11,6 +11,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.AdminBO;
+import lk.ijse.dao.custom.AdminDAO;
+import lk.ijse.dto.AdminDto;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -24,17 +26,19 @@ public class AdminSignInFormController {
     private TextField txtAdminName;
 
     @FXML
-    private TextField txtPassword;
+    private TextField txtAdminPassword;
 
     AdminBO adminBO = (AdminBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ADMIN_BO);
 
     @FXML
     void btnAdminSignInOnaction(ActionEvent event) {
-            String AdminName = txtAdminName.getText();
-            String Password = txtPassword.getText();
+        String AdminName = txtAdminName.getText();
+        String AdminPassword = txtAdminPassword.getText();
+
 
         try{
-            boolean adminIsExist = adminBO.isExistAdmin(AdminName,Password);
+            boolean adminIsExist = adminBO.isExistAdmin(AdminName,AdminPassword);
+            System.out.println(adminIsExist);
             if(adminIsExist){
                 navigateToAdminDashboard();
             }else{

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public interface AdminBO extends SuperBO {
     boolean saveAdmin(AdminDto dto) throws SQLException;
     String getEmail(String Email) throws SQLException, ClassNotFoundException;
-    boolean isExistAdmin(String AdminName,String Password) throws SQLException,ClassNotFoundException;
+    boolean isExistAdmin(String AdminName, String AdminPassword) throws SQLException,ClassNotFoundException;
 
 
 }
