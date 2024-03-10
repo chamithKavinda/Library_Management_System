@@ -38,7 +38,6 @@ public class AdminSignInFormController {
 
         try{
             boolean adminIsExist = adminBO.isExistAdmin(AdminName,AdminPassword);
-            System.out.println(adminIsExist);
             if(adminIsExist){
                 navigateToAdminDashboard();
             }else{

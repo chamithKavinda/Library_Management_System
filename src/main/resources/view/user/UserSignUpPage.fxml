@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSignUpFormController">
+<AnchorPane fx:id="UserSignUpForm" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UserSignUpFormController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -31,15 +31,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="111.0" layoutY="121.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="110.0" layoutY="234.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="111.0" layoutY="178.0" stylesheets="@../../style/textField.css" />
-      <Button layoutX="153.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="111.0" layoutY="121.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="110.0" layoutY="234.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="111.0" layoutY="178.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="153.0" layoutY="287.0" mnemonicParsing="false" onAction="#btnUserSignUpOnAction" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="34.0" layoutY="331.0" text="Back to Sign in" textFill="#0a1747" />
+      <Hyperlink layoutX="34.0" layoutY="331.0" onAction="#hyperUserSignInOnAction" text="Back to Sign in" textFill="#0a1747" />
       <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="115.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-username-30.png" />

@@ -22,6 +22,10 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
+    public String getEmail(String Email) throws SQLException, ClassNotFoundException {
+        return null;
+    }
+    @Override
     public boolean save(User entity){
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

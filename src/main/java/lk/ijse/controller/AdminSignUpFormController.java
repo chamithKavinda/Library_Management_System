@@ -73,7 +73,7 @@ public class AdminSignUpFormController {
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) AdminSignUpPage.getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("UserSignInForm");
+        stage.setTitle("AdminSignInForm");
         stage.centerOnScreen();
     }
 
