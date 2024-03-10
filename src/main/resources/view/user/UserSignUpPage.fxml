@@ -16,54 +16,43 @@
             <Image url="@../../assest/UserSignUpPage.jpg" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="111.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="111.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="111.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="111.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="111.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="111.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="111.0" layoutY="171.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="110.0" layoutY="284.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="111.0" layoutY="228.0" stylesheets="@../../style/textField.css" />
-      <Button layoutX="148.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
+      <TextField alignment="CENTER" layoutX="111.0" layoutY="121.0" stylesheets="@../../style/textField.css" />
+      <TextField alignment="CENTER" layoutX="110.0" layoutY="234.0" stylesheets="@../../style/textField.css" />
+      <TextField alignment="CENTER" layoutX="111.0" layoutY="178.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="153.0" layoutY="287.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign Up">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Hyperlink layoutX="34.0" layoutY="354.0" text="Back to Sign in" textFill="#0a1747" />
-      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="115.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+      <Hyperlink layoutX="34.0" layoutY="331.0" text="Back to Sign in" textFill="#0a1747" />
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="115.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-username-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="114.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="114.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="116.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="116.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-email-24.png" />
-         </image>
-      </ImageView>
-      <Text fill="#0a1747" layoutX="111.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id" wrappingWidth="84.13671875">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <TextField alignment="CENTER" layoutX="111.0" layoutY="115.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="115.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-id-48.png" />
          </image>
       </ImageView>
    </children>

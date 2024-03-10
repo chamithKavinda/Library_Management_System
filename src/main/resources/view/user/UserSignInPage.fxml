@@ -26,9 +26,9 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="87.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
-      <TextField alignment="CENTER" layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
-      <Button layoutX="130.0" layoutY="257.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="87.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="130.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnUserSignInOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
@@ -37,7 +37,7 @@
             <Font size="11.0" />
          </font>
       </Text>
-      <Hyperlink layoutX="203.0" layoutY="299.0" text="Sign Up" textFill="#0a1747">
+      <Hyperlink layoutX="203.0" layoutY="299.0" onAction="#hyperUserSignUpOnAction" text="Sign Up" textFill="#0a1747">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
