@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="732.0" prefWidth="1375.0" style="-fx-background-color: #FFF1E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardFormController">
+<AnchorPane fx:id="AdminDashbordForm" prefHeight="732.0" prefWidth="1375.0" style="-fx-background-color: FFF1E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminDashboardFormController">
    <children>
       <AnchorPane layoutX="-2.0" layoutY="2.0" prefHeight="732.0" prefWidth="261.0" />
-      <Button layoutX="30.0" layoutY="99.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Dashboard">
+      <Button layoutX="30.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnDashboardOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Dashboard">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -18,7 +18,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="30.0" layoutY="192.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Users">
+      <Button layoutX="30.0" layoutY="212.0" mnemonicParsing="false" onAction="#btnUsersOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Users">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -27,7 +27,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="30.0" layoutY="289.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Books">
+      <Button layoutX="30.0" layoutY="309.0" mnemonicParsing="false" onAction="#btnBooksOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Books">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -36,7 +36,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="34.0" layoutY="386.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Records">
+      <Button layoutX="34.0" layoutY="406.0" mnemonicParsing="false" onAction="#btnRecordsOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Records">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -45,7 +45,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="34.0" layoutY="482.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Branches">
+      <Button layoutX="34.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnBranchesOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Branches">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -54,7 +54,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="35.0" layoutY="575.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Log Out">
+      <Button layoutX="35.0" layoutY="595.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="60.0" prefWidth="225.0" stylesheets="@../../style/DashboardButton.css" text="Log Out">
          <graphic>
             <ImageView fitHeight="42.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -63,13 +63,24 @@
             </ImageView>
          </graphic>
       </Button>
-      <AnchorPane layoutX="391.0" layoutY="27.0" prefHeight="46.0" prefWidth="959.0">
+      <AnchorPane layoutX="391.0" layoutY="27.0" prefHeight="20.0" prefWidth="959.0">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="153.0" layoutX="777.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="42.0" fitWidth="153.0" layoutX="777.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../assest/Logo%20(1).jpg" />
+                  <Image url="@../../assest/Logo%20(1).jpg" />
                </image>
             </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" layoutY="82.0" prefHeight="634.0" prefWidth="1086.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="27.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/admin%20dashboard%20image.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="time" layoutX="443.0" layoutY="17.0" prefHeight="53.0" prefWidth="170.0" text="time" />
+            <Label fx:id="date" layoutX="408.0" layoutY="70.0" prefHeight="53.0" prefWidth="270.0" text="date" />
          </children>
       </AnchorPane>
    </children>
