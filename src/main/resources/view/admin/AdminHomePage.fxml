@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="root" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: FFF1E6;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.AdminHomeFormController">
+   <children>
+      <AnchorPane fx:id="root" layoutY="3.0" prefHeight="634.0" prefWidth="1086.0">
+         <children>
+            <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="27.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/admin%20dashboard%20image.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="time" layoutX="443.0" layoutY="17.0" prefHeight="53.0" prefWidth="170.0" text="time" />
+            <Label fx:id="date" layoutX="408.0" layoutY="70.0" prefHeight="53.0" prefWidth="270.0" text="date" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
