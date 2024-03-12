@@ -72,7 +72,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="270.0" layoutY="82.0" prefHeight="634.0" prefWidth="1086.0">
+      <AnchorPane fx:id="root" layoutX="270.0" layoutY="82.0" prefHeight="634.0" prefWidth="1086.0">
          <children>
             <ImageView fitHeight="500.0" fitWidth="500.0" layoutX="27.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
                <image>

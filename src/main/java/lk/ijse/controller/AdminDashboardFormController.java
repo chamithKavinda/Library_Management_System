@@ -17,24 +17,29 @@ public class AdminDashboardFormController {
     private AnchorPane AdminDashbordForm;
 
     @FXML
+    private AnchorPane root;
+
+    @FXML
     private Label date;
 
     @FXML
     private Label time;
 
     @FXML
-    void btnBooksOnAction(ActionEvent event) {
+    void btnBooksOnAction(ActionEvent event) throws IOException {
 
     }
 
     @FXML
-    void btnBranchesOnAction(ActionEvent event) {
-
+    void btnBranchesOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane;
+        anchorPane = FXMLLoader.<AnchorPane>load(getClass().getResource("/view/admin/BranchesPage.fxml"));
+        this.root.getChildren().clear();
+        this.root.getChildren().add(anchorPane);
     }
 
     @FXML
-    void btnDashboardOnAction(ActionEvent event) {
-
+    void btnDashboardOnAction(ActionEvent event) throws IOException {
     }
 
     @FXML
