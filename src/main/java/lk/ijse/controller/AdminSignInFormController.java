@@ -75,7 +75,7 @@ public class AdminSignInFormController {
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) adminSignInPage.getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("UserSignInForm");
+        stage.setTitle("LogInDashBoard");
         stage.centerOnScreen();
     }
 

@@ -71,4 +71,14 @@ public class UserSignUpFormController {
         stage.centerOnScreen();
     }
 
+
+    @FXML
+    void btnBackOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/user/UserSignInPage.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) UserSignUpForm.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("UserSignInForm");
+        stage.centerOnScreen();
+    }
 }
