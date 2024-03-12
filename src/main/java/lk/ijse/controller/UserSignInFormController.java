@@ -50,7 +50,7 @@ public class UserSignInFormController {
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) userSignInPage.getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("UserDashboard");
+        stage.setTitle("User Dashboard");
         stage.centerOnScreen();
     }
 
@@ -60,7 +60,7 @@ public class UserSignInFormController {
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) userSignInPage.getScene().getWindow();
         stage.setScene(scene);
-        stage.setTitle("UserSignInForm");
+        stage.setTitle("User SignUp Form");
         stage.centerOnScreen();
     }
 

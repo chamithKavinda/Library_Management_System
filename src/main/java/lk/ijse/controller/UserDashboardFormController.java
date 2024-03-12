@@ -38,7 +38,7 @@ public class UserDashboardFormController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.setTitle("Admin SignIn");
+        stage.setTitle("User SignIn");
         stage.show();
 
         Stage dashboard= (Stage) UserDashboard.getScene().getWindow();
