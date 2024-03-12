@@ -65,8 +65,11 @@ public class AdminDashboardFormController {
     }
 
     @FXML
-    void btnUsersOnAction(ActionEvent event) {
-
+    void btnUsersOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane;
+        anchorPane = FXMLLoader.<AnchorPane>load(getClass().getResource("/view/admin/AdminUsersPage.fxml"));
+        this.root.getChildren().clear();
+        this.root.getChildren().add(anchorPane);
     }
 
 }
