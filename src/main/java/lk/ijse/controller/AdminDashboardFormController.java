@@ -44,10 +44,9 @@ public class AdminDashboardFormController {
         Stage stage = new Stage();
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.setTitle("Login");
+        stage.setTitle("Admin SignIn");
         stage.show();
 
-        //Close the Current Window
         Stage dashboard= (Stage) AdminDashbordForm.getScene().getWindow();
         dashboard.close();
     }
