@@ -66,5 +66,14 @@
             <Image url="@../../assest/icons8-id-48.png" />
          </image>
       </ImageView>
+      <Button layoutX="23.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="17.0" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-back-button-24.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </AnchorPane>

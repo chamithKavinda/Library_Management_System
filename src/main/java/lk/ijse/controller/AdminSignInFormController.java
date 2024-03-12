@@ -69,4 +69,14 @@ public class AdminSignInFormController {
         stage.centerOnScreen();
     }
 
+    @FXML
+    void btnBackOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/LoginDashboard.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage = (Stage) adminSignInPage.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("UserSignInForm");
+        stage.centerOnScreen();
+    }
+
 }
