@@ -27,7 +27,10 @@ public class AdminDashboardFormController {
 
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
-
+        AnchorPane anchorPane;
+        anchorPane = FXMLLoader.<AnchorPane>load(getClass().getResource("/view/admin/AdminBooksPage.fxml"));
+        this.root.getChildren().clear();
+        this.root.getChildren().add(anchorPane);
     }
 
     @FXML
