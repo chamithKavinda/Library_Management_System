@@ -23,39 +23,39 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="122.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username*">
+      <Text fill="#0a1747" layoutX="122.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Text>
-      <TextField alignment="CENTER" layoutX="122.0" layoutY="270.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="120.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail*">
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="122.0" layoutY="237.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="120.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="120.0" layoutY="340.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="118.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password*">
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="120.0" layoutY="308.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="118.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="119.0" layoutY="411.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="127.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="119.0" layoutY="379.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="127.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-username-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="125.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="125.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="123.0" layoutY="416.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="123.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
          </image>
       </ImageView>
-      <Button layoutX="117.0" layoutY="472.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+      <Button layoutX="117.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -64,7 +64,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="237.0" layoutY="527.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+      <Button layoutX="237.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -73,7 +73,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="116.0" layoutY="527.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+      <Button layoutX="116.0" layoutY="510.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -82,7 +82,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="237.0" layoutY="472.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
+      <Button layoutX="237.0" layoutY="455.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -91,23 +91,11 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text fill="#0a1747" layoutX="124.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User id*">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <TextField alignment="CENTER" layoutX="123.0" layoutY="201.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="127.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-id-48.png" />
-         </image>
-      </ImageView>
-      <TableView layoutX="477.0" layoutY="112.0" prefHeight="476.0" prefWidth="553.0" stylesheets="@../../style/TableView.css">
+      <TableView fx:id="tblUser" layoutX="513.0" layoutY="112.0" prefHeight="476.0" prefWidth="483.0" stylesheets="@../../style/TableView.css">
         <columns>
-          <TableColumn text="User Id" />
-          <TableColumn prefWidth="150.0" text="User Name" />
-            <TableColumn prefWidth="220.0" text="Email" />
-            <TableColumn prefWidth="100.0" text="Password" />
+          <TableColumn fx:id="colUserName" prefWidth="150.0" text="User Name" />
+            <TableColumn fx:id="colUserEmail" prefWidth="220.0" text="Email" />
+            <TableColumn fx:id="colUserPassword" prefWidth="100.0" text="Password" />
         </columns>
          <styleClass>
             <String fx:value="column-header" />
