@@ -25,5 +25,15 @@
                </font></Label>
          </children>
       </AnchorPane>
+      <ImageView fitHeight="440.0" fitWidth="398.0" layoutX="618.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/branches_map-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="124.0" layoutX="927.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-admin-80.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -88,6 +88,17 @@
                <font>
                   <Font name="System Bold" size="40.0" />
                </font></Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="786.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="440.0" fitWidth="398.0" layoutX="608.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/branches_map-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="128.0" fitWidth="124.0" layoutX="917.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-admin-80.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
