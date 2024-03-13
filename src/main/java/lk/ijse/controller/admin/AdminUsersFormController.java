@@ -1,18 +1,24 @@
 package lk.ijse.controller.admin;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableArray;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.AdminBO;
 import lk.ijse.bo.custom.UserBO;
 import lk.ijse.dto.UserDto;
+import lk.ijse.dto.tm.UserTm;
 import lk.ijse.entity.User;
 
 import java.sql.SQLException;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class AdminUsersFormController {
@@ -27,7 +33,7 @@ public class AdminUsersFormController {
     private TableColumn<?, ?> colUserPassword;
 
     @FXML
-    private TableView<?> tblUser;
+    private TableView<UserTm> tblUser;
 
     @FXML
     private TextField txtUserEmail;
@@ -39,6 +45,38 @@ public class AdminUsersFormController {
     private TextField txtUserPassword;
 
     UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.USER_BO);
+
+    public void initialize() {
+        setCellValueFactory();
+        loadAllUser();
+    }
+
+    private void setCellValueFactory() {
+        colUserName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colUserEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colUserPassword.setCellValueFactory(new PropertyValueFactory<>("password"));
+    }
+
+    private void loadAllUser(){
+        ObservableList<UserTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<UserDto> dtoList = userBO.getAllUsers();
+
+            for (UserDto dto: dtoList){
+                obList.add(
+                        new UserTm(
+                                dto.getName(),
+                                dto.getEmail(),
+                                dto.getPassword()
+                        ));
+            }
+            tblUser.setItems(obList);
+            tblUser.refresh();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
@@ -58,10 +96,6 @@ public class AdminUsersFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
-        boolean isValidate = validateFields();
-        if (!isValidate) {
-            return;
-        }
 
         try {
             boolean adminCheck = txtUserEmail.getText().equals(userBO.getEmail(txtUserEmail.getText()));
@@ -85,30 +119,7 @@ public class AdminUsersFormController {
         clearFields();
     }
 
-    private boolean validateFields() {
-        String userName = txtUserName.getText();
-        boolean isUserNameValidated = Pattern.matches("^[A-Za-z\\s]+$",userName);
-        if (isUserNameValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Name").show();
-            return false;
-        }
 
-        String userEmail = txtUserEmail.getText();
-        boolean isUserEmailValidated = Pattern.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\n",userEmail);
-        if (isUserEmailValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Email").show();
-            return false;
-        }
-
-        String userPassword = txtUserPassword.getText();
-        boolean isUserPasswordValidated = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d!@#$%^&*()_+]{8,}$\n",userPassword);
-        if (isUserPasswordValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Password").show();
-            return false;
-        }
-
-        return true;
-    }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {

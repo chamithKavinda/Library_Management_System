@@ -34,10 +34,6 @@ public class UserSignUpFormController {
     UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.USER_BO);
     @FXML
     void btnUserSignUpOnAction(ActionEvent event) {
-        boolean isValidate = validateFields();
-        if (!isValidate) {
-            return;
-        }
 
         try {
             boolean adminCheck = txtUserEmail.getText().equals(userBO.getEmail(txtUserEmail.getText()));
@@ -61,29 +57,7 @@ public class UserSignUpFormController {
         clearFields();
     }
 
-    private boolean validateFields() {
-        String userName = txtUserName.getText();
-        boolean isUserNameValidated = Pattern.matches("^[A-Za-z\\s]+$",userName);
-        if (isUserNameValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Name").show();
-            return false;
-        }
 
-        String userEmail = txtUserEmail.getText();
-        boolean isUserEmailValidated = Pattern.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\n",userEmail);
-        if (isUserEmailValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Email").show();
-            return false;
-        }
-
-        String userPassword = txtUserPassword.getText();
-        boolean isUserPasswordValidated = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d!@#$%^&*()_+]{8,}$\n",userPassword);
-        if (isUserPasswordValidated){
-            new Alert(Alert.AlertType.ERROR, "Invalid User Password").show();
-            return false;
-        }
-        return true;
-    }
 
     private void clearFields() {
         txtUserName.setText("");

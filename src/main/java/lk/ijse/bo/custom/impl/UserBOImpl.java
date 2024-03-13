@@ -7,9 +7,26 @@ import lk.ijse.dto.UserDto;
 import lk.ijse.entity.User;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserBOImpl implements UserBO {
     UserDAO userDAO = (UserDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.USER);
+
+    @Override
+    public List<UserDto> getAllUsers() throws SQLException {
+        List<User> entityList = userDAO.getAll();
+
+        List<UserDto> dtoList = new ArrayList<>();
+
+        for (User user:entityList){
+            dtoList.add(new UserDto(
+                    user.getName(),
+                    user.getEmail(),
+                    user.getPassword()));
+        }
+        return dtoList;
+    }
 
     @Override
     public boolean saveUser(UserDto dto)throws SQLException {

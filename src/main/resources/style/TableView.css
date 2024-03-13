@@ -22,7 +22,7 @@
 }
 
 .table-row-cell:odd {
-    -fx-background-color: #FCB9B2;
+    -fx-background-color: #FAC0BA;
 }
 
 .table-row-cell:selected {
