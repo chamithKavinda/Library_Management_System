@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BooksFormController">
    <children>
-      <TableView layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="575.0" stylesheets="@../../style/TableView.css">
+      <TableView layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="575.0" stylesheets="@../../style/UserTables.css">
          <columns>
             <TableColumn text="Book Id" />
             <TableColumn prefWidth="120.0" text="Title" />
@@ -23,9 +23,9 @@
             <TableColumn prefWidth="120.0" text="Status" />
          </columns>
          <styleClass>
-            <String fx:value="column-header" />
-            <String fx:value="table-cell" />
-            <String fx:value="table-row-cell" />
+            <String fx:value="ucolumn-header" />
+            <String fx:value="utable-cell" />
+            <String fx:value="utable-row-cell" />
          </styleClass>
       </TableView>
       <ImageView fitHeight="521.0" fitWidth="317.0" layoutX="737.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">

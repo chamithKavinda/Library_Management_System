@@ -14,7 +14,7 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <TableView layoutX="236.0" layoutY="127.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
+      <TableView layoutX="236.0" layoutY="127.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/UserTables.css">
          <columns>
             <TableColumn prefWidth="100.0" text="Transaction Id" />
             <TableColumn prefWidth="120.0" text="Book Id" />
@@ -23,9 +23,9 @@
             <TableColumn prefWidth="120.0" text="Date &amp; Time" />
          </columns>
          <styleClass>
-            <String fx:value="column-header" />
-            <String fx:value="table-cell" />
-            <String fx:value="table-row-cell" />
+            <String fx:value="ucolumn-header" />
+            <String fx:value="utable-cell" />
+            <String fx:value="utable-row-cell" />
          </styleClass>
       </TableView>
    </children>
