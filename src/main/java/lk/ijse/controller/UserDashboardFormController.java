@@ -75,8 +75,11 @@ public class UserDashboardFormController {
     }
 
     @FXML
-    void btnSettingsOnAction(ActionEvent event) {
-
+    void btnSettingsOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane;
+        anchorPane = FXMLLoader.<AnchorPane>load(getClass().getResource("/view/user/Settings.fxml"));
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(anchorPane);
     }
 
     private void TimeNow(){
