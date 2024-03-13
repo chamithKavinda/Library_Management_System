@@ -15,6 +15,7 @@ import lk.ijse.dto.AdminDto;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class AdminSignUpFormController {
 
@@ -36,6 +37,10 @@ public class AdminSignUpFormController {
     AdminBO adminBO = (AdminBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.ADMIN_BO);
     @FXML
     void btnAdminSignUpOnAction(ActionEvent event) {
+        boolean isValidate = validateFields();
+        if (!isValidate) {
+            return;
+        }
         try {
             boolean adminCheck = txtAdminEmail.getText().equals(adminBO.getEmail(txtAdminEmail.getText()));
             if (!adminCheck) {
@@ -58,6 +63,39 @@ public class AdminSignUpFormController {
         }
         clearFields();
 
+    }
+
+    private boolean validateFields() {
+        String adminId = txtAdminId.getText();
+        boolean isAdminIdValidated = Pattern.matches("^A\\d{3}$\n",adminId);
+        if (isAdminIdValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid Admin Id").show();
+            return false;
+        }
+
+        String adminName = txtAdminName.getText();
+        boolean isAdminNameValidated = Pattern.matches("^[a-zA-ZÀ-ÖØ-öø-ÿ-']+$\n",adminName);
+        if (isAdminNameValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid Admin Name").show();
+            return false;
+        }
+
+        String adminEmail = txtAdminEmail.getText();
+        boolean isAdminEmailValidated = Pattern.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\n",adminEmail);
+        if (isAdminEmailValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid Admin Email").show();
+            return false;
+        }
+
+        String adminPassword = txtAdminPassword.getText();
+        boolean isAdminPasswordValidated = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d!@#$%^&*()_+]{8,}$\n",adminPassword);
+        if (isAdminPasswordValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid Admin Password").show();
+            return false;
+        }
+
+
+        return true;
     }
 
     private void clearFields() {

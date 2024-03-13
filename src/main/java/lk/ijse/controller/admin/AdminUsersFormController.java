@@ -2,9 +2,18 @@ package lk.ijse.controller.admin;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import lk.ijse.bo.BOFactory;
+import lk.ijse.bo.custom.AdminBO;
+import lk.ijse.bo.custom.UserBO;
+import lk.ijse.dto.UserDto;
+import lk.ijse.entity.User;
+
+import java.sql.SQLException;
+import java.util.regex.Pattern;
 
 public class AdminUsersFormController {
 
@@ -29,6 +38,8 @@ public class AdminUsersFormController {
     @FXML
     private TextField txtUserPassword;
 
+    UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.USER_BO);
+
     @FXML
     void btnClearOnAction(ActionEvent event) {
         clearFields();
@@ -47,7 +58,56 @@ public class AdminUsersFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
+        boolean isValidate = validateFields();
+        if (!isValidate) {
+            return;
+        }
 
+        try {
+            boolean adminCheck = txtUserEmail.getText().equals(userBO.getEmail(txtUserEmail.getText()));
+            if (!adminCheck) {
+                UserDto dto = new UserDto();
+
+                dto.setName(txtUserName.getText());
+                dto.setEmail(txtUserEmail.getText());
+                dto.setPassword(txtUserPassword.getText());
+
+                boolean isSaved = userBO.saveUser(dto);
+                if (isSaved) {
+                    new Alert(Alert.AlertType.CONFIRMATION, "User Saved").show();
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "User not saved").show();
+                }
+            }
+        } catch (SQLException | ClassNotFoundException throwables ){
+            throwables.printStackTrace();
+        }
+        clearFields();
+    }
+
+    private boolean validateFields() {
+        String userName = txtUserName.getText();
+        boolean isUserNameValidated = Pattern.matches("^[A-Za-z\\s]+$",userName);
+        if (isUserNameValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid User Name").show();
+            return false;
+        }
+
+        String userEmail = txtUserEmail.getText();
+        boolean isUserEmailValidated = Pattern.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\n",userEmail);
+        if (isUserEmailValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid User Email").show();
+            return false;
+        }
+
+        String userPassword = txtUserPassword.getText();
+        boolean isUserPasswordValidated = Pattern.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[A-Za-z\\d!@#$%^&*()_+]{8,}$\n",userPassword);
+        if (isUserPasswordValidated){
+            new Alert(Alert.AlertType.ERROR, "Invalid User Password").show();
+            return false;
+        }
+
+        return true;
     }
 
     @FXML
