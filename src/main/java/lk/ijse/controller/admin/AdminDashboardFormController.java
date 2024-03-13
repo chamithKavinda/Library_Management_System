@@ -1,4 +1,4 @@
-package lk.ijse.controller;
+package lk.ijse.controller.admin;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;

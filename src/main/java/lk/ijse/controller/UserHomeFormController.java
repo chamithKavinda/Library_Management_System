@@ -4,19 +4,15 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class AdminHomeFormController {
+public class UserHomeFormController {
 
     @FXML
     private Label date;
     private volatile boolean stop  = false;
-
-    @FXML
-    private AnchorPane root;
 
     @FXML
     private Label time;
