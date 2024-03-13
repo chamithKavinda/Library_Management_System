@@ -1,7 +1,6 @@
 package lk.ijse.controller.admin;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,15 +10,15 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.bo.BOFactory;
-import lk.ijse.bo.custom.AdminBO;
 import lk.ijse.bo.custom.UserBO;
 import lk.ijse.dto.UserDto;
 import lk.ijse.dto.tm.UserTm;
-import lk.ijse.entity.User;
+
+
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.regex.Pattern;
+
 
 public class AdminUsersFormController {
 
@@ -91,7 +90,18 @@ public class AdminUsersFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        String email = txtUserEmail.getText();
 
+        try{
+            boolean isDeleted = userBO.deleteUser(email);
+
+            if (isDeleted){
+                new Alert(Alert.AlertType.CONFIRMATION,"User deleted!").show();
+                loadAllUser();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML
@@ -117,13 +127,26 @@ public class AdminUsersFormController {
             throwables.printStackTrace();
         }
         clearFields();
+        tblUser.refresh();
     }
-
-
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
+        String name = txtUserName.getText();
+        String email = txtUserEmail.getText();
+        String password = txtUserPassword.getText();
 
+        var dto = new UserDto(name,email,password);
+
+        try{
+            boolean isUpdated = userBO.updateUser(dto);
+            if (isUpdated){
+                new Alert(Alert.AlertType.CONFIRMATION, "User Updated!").show();
+                loadAllUser();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
 }

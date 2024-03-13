@@ -41,6 +41,24 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+
+
+    @Override
+    public boolean update(User user) throws SQLException {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.update(user);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+            return false;
+        }finally {
+            session.close();
+        }
+    }
+
     @Override
     public boolean exist(String UserName, String UserPassword) throws SQLException, ClassNotFoundException {
         Session session = SessionFactoryConfig.getInstance().getSession();
@@ -58,4 +76,22 @@ public class UserDAOImpl implements UserDAO {
             return false;
         }
     }
+
+    @Override
+    public boolean delete(String email) throws SQLException {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.delete(email);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+            return false;
+        }finally {
+            session.close();
+        }
+    }
+
+
 }

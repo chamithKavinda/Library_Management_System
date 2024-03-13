@@ -43,4 +43,18 @@ public class UserBOImpl implements UserBO {
     public boolean isExistUser(String UserName, String UserPassword)throws SQLException, ClassNotFoundException{
         return userDAO.exist(UserName,UserPassword);
     }
+
+    @Override
+    public boolean deleteUser(String email) throws SQLException {
+        return userDAO.delete(email);
+    }
+
+    @Override
+    public boolean updateUser(UserDto dto) throws SQLException {
+        return userDAO.update(new User(
+                dto.getName(),
+                dto.getEmail(),
+                dto.getPassword()));
+    }
+
 }

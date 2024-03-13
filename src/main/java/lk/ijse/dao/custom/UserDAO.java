@@ -15,4 +15,5 @@ public interface UserDAO extends CrudDAO<User> {
     boolean save(User entity);
 
     boolean exist(String UserName, String UserPassword) throws SQLException, ClassNotFoundException;
+
 }

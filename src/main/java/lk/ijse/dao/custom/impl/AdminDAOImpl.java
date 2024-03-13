@@ -37,6 +37,16 @@ public class AdminDAOImpl implements AdminDAO {
     }
 
     @Override
+    public boolean delete(String Email) throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean update(Admin admin) throws SQLException {
+        return false;
+    }
+
+    @Override
     public String getEmail(String Email) throws SQLException, ClassNotFoundException {
         return null;
     }
