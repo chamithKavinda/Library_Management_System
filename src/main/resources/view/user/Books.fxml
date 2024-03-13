@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BooksFormController">
+   <children>
+      <TableView layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="575.0" stylesheets="@../../style/TableView.css">
+         <columns>
+            <TableColumn text="Book Id" />
+            <TableColumn prefWidth="120.0" text="Title" />
+            <TableColumn prefWidth="120.0" text="Author" />
+            <TableColumn prefWidth="120.0" text="Genre" />
+            <TableColumn prefWidth="120.0" text="Status" />
+         </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+         </styleClass>
+      </TableView>
+      <ImageView fitHeight="521.0" fitWidth="317.0" layoutX="737.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/Frame%201.png" />
+         </image>
+      </ImageView>
+      <ComboBox layoutX="802.0" layoutY="243.0" prefWidth="150.0" />
+      <Text fill="#0a1747" layoutX="841.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="827.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="803.0" layoutY="319.0" prefWidth="150.0" />
+      <Button layoutX="828.0" layoutY="382.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -37,8 +37,11 @@ public class UserDashboardFormController {
     }
 
     @FXML
-    void btnBooksOnAction(ActionEvent event) {
-
+    void btnBooksOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane;
+        anchorPane = FXMLLoader.<AnchorPane>load(getClass().getResource("/view/user/Books.fxml"));
+        this.pane.getChildren().clear();
+        this.pane.getChildren().add(anchorPane);
     }
 
     @FXML
