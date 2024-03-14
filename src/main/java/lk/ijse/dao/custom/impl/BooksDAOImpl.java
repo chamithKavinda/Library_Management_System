@@ -31,6 +31,20 @@ public class BooksDAOImpl implements BooksDAO {
     }
 
     @Override
+    public Books search(String id) {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+
+        try {
+            Books books= session.get(Books.class, id);
+            return books;
+        } catch (Exception e) {
+            return null;
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
     public boolean delete(String id) throws SQLException {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();

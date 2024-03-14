@@ -28,10 +28,15 @@ public class Records {
 
     @ManyToOne
     @JoinColumn(name = "book_id",nullable = false)
-    private String id;
+    private Books id;
 
     @ManyToOne
     @JoinColumn(name = "user_email",nullable = false)
-    private String email;
+    private User email;
 
+    public Records(String returnDate, Books id, User email) {
+        this.returnDate = returnDate;
+        this.id = id;
+        this.email = email;
+    }
 }

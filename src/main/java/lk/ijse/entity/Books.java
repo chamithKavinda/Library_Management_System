@@ -31,6 +31,14 @@ public class Books {
     @Column(name = "status")
     private String status;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "books")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "id")
     private List<Records> bookTransactions = new ArrayList<>();
+
+    public Books(String id, String title, String author, String genre, String status) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.status = status;
+    }
 }

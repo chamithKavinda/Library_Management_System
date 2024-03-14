@@ -11,4 +11,5 @@ public interface BooksDAO extends CrudDAO<Books> {
 
     List<Books> getAll();
     boolean save(Books entity);
+    Books search(String id);
 }

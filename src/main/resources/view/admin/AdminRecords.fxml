@@ -46,7 +46,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="126.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+      <Button layoutX="126.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -55,7 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="241.0" layoutY="450.0" mnemonicParsing="false" onAction="#btndeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+      <Button layoutX="241.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -75,11 +75,11 @@
       </Button>
       <TableView fx:id="tblRecords" layoutX="460.0" layoutY="128.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
          <columns>
-            <TableColumn prefWidth="100.0" text="Transaction Id" />
+            <TableColumn fx:id="colTransactionId" prefWidth="100.0" text="Transaction Id" />
             <TableColumn fx:id="colBookId" prefWidth="120.0" text="Book Id" />
             <TableColumn fx:id="colUserName" prefWidth="120.0" text="User Email" />
             <TableColumn fx:id="colReturnDate" prefWidth="120.0" text="Return Date" />
-            <TableColumn prefWidth="120.0" text="Date &amp; Time" />
+            <TableColumn fx:id="colDateTime" prefWidth="120.0" text="Date &amp; Time" />
          </columns>
          <styleClass>
             <String fx:value="column-header" />
