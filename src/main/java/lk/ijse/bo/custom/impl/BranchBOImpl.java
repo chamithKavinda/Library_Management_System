@@ -23,6 +23,11 @@ public class BranchBOImpl implements BranchBO {
     }
 
     @Override
+    public boolean deleteBranch(String id) throws SQLException {
+        return branchDAO.delete(id);
+    }
+
+    @Override
     public boolean updateBranch(BranchDto dto) throws SQLException {
         return branchDAO.update(new Branch(
                 dto.getId(),

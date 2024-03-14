@@ -61,7 +61,18 @@ public class BranchesFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        String id = txtBranchId.getText();
 
+        try{
+            boolean isDeleted = branchBO.deleteBranch(id);
+
+            if (isDeleted){
+                new Alert(Alert.AlertType.CONFIRMATION,"Branch deleted!").show();
+               // loadAllBranch();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML

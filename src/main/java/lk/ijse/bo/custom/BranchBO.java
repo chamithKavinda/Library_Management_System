@@ -9,5 +9,6 @@ import java.sql.SQLException;
 
 public interface BranchBO extends SuperBO {
     boolean saveBranch(BranchDto dto)throws SQLException;
+    boolean deleteBranch(String id) throws SQLException;
     boolean updateBranch(final BranchDto dto) throws SQLException;
 }

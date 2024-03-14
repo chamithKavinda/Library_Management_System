@@ -32,8 +32,19 @@ public class BranchDAOImpl implements BranchDAO {
     }
 
     @Override
-    public boolean delete(String email) throws SQLException {
-        return false;
+    public boolean delete(String id) throws SQLException {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        try{
+            session.delete(id);
+            transaction.commit();
+            return true;
+        }catch (Exception e){
+            transaction.rollback();
+            return false;
+        }finally {
+            session.close();
+        }
     }
 
     @Override
