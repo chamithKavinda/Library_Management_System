@@ -9,13 +9,11 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.BooksBO;
 import lk.ijse.dto.BooksDto;
-import lk.ijse.dto.UserDto;
 import lk.ijse.dto.tm.BooksTm;
-import lk.ijse.dto.tm.UserTm;
+
 
 import java.sql.SQLException;
 import java.util.List;
@@ -40,8 +38,6 @@ public class AdminBooksFormController {
     @FXML
     private TableView<BooksTm> tblBooks;
 
-    @FXML
-    private AnchorPane pane;
 
     @FXML
     private TextField txtAuthor;

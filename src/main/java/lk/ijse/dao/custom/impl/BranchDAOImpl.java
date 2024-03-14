@@ -3,16 +3,23 @@ package lk.ijse.dao.custom.impl;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.BranchDAO;
 import lk.ijse.entity.Branch;
+import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class BranchDAOImpl implements BranchDAO {
     @Override
-    public List<Branch> getAll() throws SQLException {
-        return null;
+    public List<Branch> getAll() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        String sql = "FROM Branch ";
+        Query query = session.createQuery(sql);
+        List<Branch> userList = query.list();
+        session.close();
+        return userList;
     }
 
     @Override

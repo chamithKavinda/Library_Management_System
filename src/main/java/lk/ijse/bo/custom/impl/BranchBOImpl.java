@@ -5,12 +5,32 @@ import lk.ijse.dao.DAOFactory;
 import lk.ijse.dao.custom.BooksDAO;
 import lk.ijse.dao.custom.BranchDAO;
 import lk.ijse.dto.BranchDto;
+import lk.ijse.dto.UserDto;
 import lk.ijse.entity.Branch;
+import lk.ijse.entity.User;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BranchBOImpl implements BranchBO {
     BranchDAO branchDAO = (BranchDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.BRANCH);
+
+    @Override
+    public List<BranchDto> getAllBranch() throws SQLException {
+        List<Branch> entityList = branchDAO.getAll();
+
+        List<BranchDto> dtoList = new ArrayList<>();
+
+        for (Branch branch:entityList){
+            dtoList.add(new BranchDto(
+                    branch.getId(),
+                    branch.getName(),
+                    branch.getContact(),
+                    branch.getCity()));
+        }
+        return dtoList;
+    }
 
     @Override
     public boolean saveBranch(BranchDto dto) throws SQLException {
