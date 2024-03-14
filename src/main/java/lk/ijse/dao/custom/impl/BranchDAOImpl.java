@@ -43,7 +43,8 @@ public class BranchDAOImpl implements BranchDAO {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.delete(id);
+            Branch branch = session.get(Branch.class,id);
+            session.delete(branch);
             transaction.commit();
             return true;
         }catch (Exception e){
