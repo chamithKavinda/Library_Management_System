@@ -24,27 +24,41 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <ImageView fitHeight="520.0" fitWidth="339.0" layoutX="743.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="517.0" fitWidth="406.0" layoutX="686.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/Frame%201.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="115.0" fitWidth="122.0" layoutX="835.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="132.0" fitWidth="133.0" layoutX="793.0" layoutY="219.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/836-removebg-preview.png" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="859.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+      <Text fill="#0a1747" layoutX="816.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="861.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+      <Text fill="#0a1747" layoutX="821.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label alignment="CENTER" layoutX="828.0" layoutY="404.0" prefHeight="17.0" prefWidth="133.0" style="-fx-background-color: white;" />
-      <Label alignment="CENTER" layoutX="829.0" layoutY="464.0" prefHeight="17.0" prefWidth="133.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblUserName" alignment="CENTER" layoutX="791.0" layoutY="379.0" prefHeight="24.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserPassword" alignment="CENTER" layoutX="790.0" layoutY="447.0" prefHeight="24.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="795.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-username-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="794.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-password-24.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

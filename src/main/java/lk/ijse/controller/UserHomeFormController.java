@@ -4,11 +4,18 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class UserHomeFormController {
+
+    @FXML
+    private Label lblUserName;
+
+    @FXML
+    private Label lblUserPassword;
 
     @FXML
     private Label date;
@@ -21,7 +28,14 @@ public class UserHomeFormController {
     public void initialize() {
         TimeNow();
         Date();
+        setUsernamPassword();
     }
+
+    private void setUsernamPassword() {
+        lblUserName.setText(UserBOImpl.logUserName);
+        lblUserPassword.setText(UserBOImpl.logPassword);
+    }
+
 
     private void TimeNow(){
         Thread thread = new Thread(()->{

@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.UserBO;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -35,6 +36,10 @@ public class UserSignInFormController {
             boolean userIsExist = userBO.isExistUser(UserName,UserPassword);
             if(userIsExist){
                 navigateToUserDashboard(UserName, UserPassword);
+
+                UserBOImpl.logUserName = UserName;
+                UserBOImpl.logPassword = UserPassword;
+
             }else{
                 new Alert(Alert.AlertType.CONFIRMATION,"User Name Password is Wrong").show();
             }

@@ -13,6 +13,9 @@ import java.util.List;
 public class UserBOImpl implements UserBO {
     UserDAO userDAO = (UserDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.USER);
 
+   public static String logUserName ;
+   public static String logPassword;
+
     @Override
     public List<UserDto> getAllUsers() throws SQLException {
         List<User> entityList = userDAO.getAll();
