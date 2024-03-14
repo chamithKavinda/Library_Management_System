@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBooksFormController">
+<AnchorPane fx:id="pane" prefHeight="634.0" prefWidth="1086.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.admin.AdminBooksFormController">
    <children>
       <ImageView fitHeight="634.0" fitWidth="1086.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -33,7 +33,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="137.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnSavOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+      <Button layoutX="137.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -79,7 +79,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="136.0" layoutY="187.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="136.0" layoutY="187.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtTitle" alignment="CENTER" layoutX="135.0" layoutY="248.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtAuthor" alignment="CENTER" layoutX="136.0" layoutY="313.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtGenre" alignment="CENTER" layoutX="136.0" layoutY="376.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />

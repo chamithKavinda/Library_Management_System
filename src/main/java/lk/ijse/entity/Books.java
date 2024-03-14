@@ -4,7 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,9 +17,8 @@ import javax.persistence.*;
 @Table(name = "books")
 public class Books {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "book_id",length = 30)
-    private int id;
+    @Column(name = "book_id" ,length = 30)
+    private String id;
 
     @Column(name = "title")
     private String title;
