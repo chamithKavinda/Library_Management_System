@@ -87,7 +87,7 @@
          <columns>
             <TableColumn fx:id="colBookId" text="Book Id" />
             <TableColumn fx:id="colTitle" prefWidth="120.0" text="Title" />
-            <TableColumn fx:id="colAuthor" prefWidth="120.0" text="Author" />
+            <TableColumn fx:id="colAuthor" prefWidth="150.0" text="Author" />
             <TableColumn fx:id="colGenre" prefWidth="120.0" text="Genre" />
             <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
          </columns>

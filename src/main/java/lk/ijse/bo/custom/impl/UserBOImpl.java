@@ -13,7 +13,7 @@ import java.util.List;
 public class UserBOImpl implements UserBO {
     UserDAO userDAO = (UserDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.USER);
 
-   public static String logUserName ;
+   public static String logUserEmail;
    public static String logPassword;
 
     @Override
@@ -38,14 +38,7 @@ public class UserBOImpl implements UserBO {
                 dto.getEmail(),
                 dto.getPassword()));
     }
-    @Override
-    public String getEmail(String Email)throws SQLException, ClassNotFoundException{
-        return userDAO.getEmail(Email);
-    }
-    @Override
-    public boolean isExistUser(String UserName, String UserPassword)throws SQLException, ClassNotFoundException{
-        return userDAO.exist(UserName,UserPassword);
-    }
+
 
     @Override
     public boolean deleteUser(String email) throws SQLException {
@@ -58,6 +51,26 @@ public class UserBOImpl implements UserBO {
                 dto.getName(),
                 dto.getEmail(),
                 dto.getPassword()));
+    }
+
+    @Override
+    public boolean IsExistUser(String UserEmail, String UserPassword) {
+        User search = userDAO.search(UserEmail);
+        if (search != null) {
+            if (search.getPassword().equals(UserPassword)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean getEmail(String email) {
+        User search = userDAO.search(email);
+        if (search != null) {
+           return true;
+        }
+        return false;
     }
 
 }

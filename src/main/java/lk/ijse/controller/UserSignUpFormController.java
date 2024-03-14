@@ -51,8 +51,8 @@ public class UserSignUpFormController {
                     new Alert(Alert.AlertType.ERROR, "User not saved").show();
                 }
             }
-        } catch (SQLException | ClassNotFoundException throwables ){
-            throwables.printStackTrace();
+        } catch (Exception e ){
+            e.printStackTrace();
         }
         clearFields();
     }

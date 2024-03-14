@@ -32,7 +32,7 @@ public class UserHomeFormController {
     }
 
     private void setUsernamPassword() {
-        lblUserName.setText(UserBOImpl.logUserName);
+        lblUserName.setText(UserBOImpl.logUserEmail);
         lblUserPassword.setText(UserBOImpl.logPassword);
     }
 

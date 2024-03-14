@@ -3,7 +3,6 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -25,24 +24,19 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="121.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Transaction Id*">
+      <Text fill="#0a1747" layoutX="129.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="129.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
+      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="128.0" layoutY="229.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="128.0" layoutY="273.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="128.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Text>
-      <TextField alignment="CENTER" layoutX="128.0" layoutY="347.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="128.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*">
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="128.0" layoutY="303.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -52,7 +46,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="126.0" layoutY="483.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+      <Button layoutX="126.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -61,7 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="242.0" layoutY="484.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
+      <Button layoutX="242.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnUpdateOnaction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -70,7 +64,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="125.0" layoutY="529.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+      <Button layoutX="125.0" layoutY="496.0" mnemonicParsing="false" onAction="#btndeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -79,7 +73,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="240.0" layoutY="528.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+      <Button layoutX="240.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -88,12 +82,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <TableView layoutX="460.0" layoutY="128.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
+      <TableView fx:id="tblRecords" layoutX="460.0" layoutY="128.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
          <columns>
             <TableColumn prefWidth="100.0" text="Transaction Id" />
-            <TableColumn prefWidth="120.0" text="Book Id" />
-            <TableColumn prefWidth="120.0" text="User Email" />
-            <TableColumn prefWidth="120.0" text="Return Date" />
+            <TableColumn fx:id="colBookId" prefWidth="120.0" text="Book Id" />
+            <TableColumn fx:id="colUserName" prefWidth="120.0" text="User Email" />
+            <TableColumn fx:id="colReturnDate" prefWidth="120.0" text="Return Date" />
             <TableColumn prefWidth="120.0" text="Date &amp; Time" />
          </columns>
          <styleClass>
@@ -102,22 +96,16 @@
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="135.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-transaction-30.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="134.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="134.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-bookstore-32.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="133.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="133.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-id-48.png" />
          </image>
       </ImageView>
-      <DatePicker layoutX="125.0" layoutY="422.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Label layoutX="127.0" layoutY="202.0" prefHeight="25.0" prefWidth="214.0" />
+      <DatePicker fx:id="txtReturnDate" layoutX="125.0" layoutY="378.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
    </children>
 </AnchorPane>

@@ -39,24 +39,19 @@
             <Image url="@../../assest/Frame%201.png" />
          </image>
       </ImageView>
-      <ComboBox layoutX="802.0" layoutY="298.0" prefWidth="150.0" />
-      <Text fill="#0a1747" layoutX="841.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+      <ComboBox layoutX="802.0" layoutY="262.0" prefWidth="150.0" />
+      <Text fill="#0a1747" layoutX="841.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="827.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
+      <Text fill="#0a1747" layoutX="827.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <DatePicker layoutX="803.0" layoutY="363.0" prefWidth="150.0" />
-      <Button layoutX="828.0" layoutY="404.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
-      <Text fill="#0a1747" layoutX="813.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id*" wrappingWidth="130.13671875">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
+      <DatePicker layoutX="803.0" layoutY="327.0" prefWidth="150.0" />
+      <Button layoutX="828.0" layoutY="382.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
       <Label layoutX="818.0" layoutY="231.0" prefHeight="30.0" prefWidth="112.0" />
    </children>
 </AnchorPane>

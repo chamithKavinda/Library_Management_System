@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SettingsFormController">
+<AnchorPane fx:id="root1" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SettingsFormController">
    <children>
       <Text fill="#0a1747" layoutX="64.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings" wrappingWidth="331.13671875">
          <font>
@@ -21,63 +21,31 @@
             <Image url="@../../assest/settings.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="500.0" fitWidth="341.0" layoutX="720.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/settings.png" />
-         </image>
-      </ImageView>
       <Text fill="#0a1747" layoutX="483.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update" wrappingWidth="148.13671875">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="833.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete" wrappingWidth="148.13671875">
-         <font>
-            <Font name="System Bold" size="35.0" />
-         </font>
-      </Text>
-      <Text fill="#0a1747" layoutX="463.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="463.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="463.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="463.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="463.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="463.0" layoutY="255.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="462.0" layoutY="368.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="463.0" layoutY="312.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="467.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="463.0" layoutY="265.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="462.0" layoutY="339.0" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="467.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-username-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="466.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="466.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="468.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-email-24.png" />
-         </image>
-      </ImageView>
-      <Text fill="#0a1747" layoutX="806.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="806.0" layoutY="303.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="811.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
       <Button layoutX="518.0" layoutY="424.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="50.0" prefWidth="56.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css">
@@ -89,14 +57,10 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="858.0" layoutY="425.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="50.0" prefWidth="56.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css">
-         <graphic>
-            <ImageView fitHeight="56.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../assest/icons8-delete-30.png" />
-               </image>
-            </ImageView>
-         </graphic>
+      <Button layoutX="875.0" layoutY="544.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="42.0" prefWidth="154.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete Account" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
       </Button>
       <ImageView fitHeight="238.0" fitWidth="200.0" layoutX="85.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -108,32 +72,21 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="148.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="150.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="161.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="62.13671875">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <Label fx:id="lblUserName" layoutX="106.0" layoutY="353.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
-      <Label fx:id="lblUserEmail" layoutX="105.0" layoutY="416.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
-      <Label fx:id="lblUserPassword" layoutX="104.0" layoutY="478.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Label fx:id="lblUserName" alignment="CENTER" layoutX="106.0" layoutY="353.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" textAlignment="CENTER" />
+      <Label fx:id="lblUserPassword" alignment="CENTER" layoutX="106.0" layoutY="418.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" textAlignment="CENTER" />
       <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="112.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-username-30.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="111.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="113.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="113.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
    </children>

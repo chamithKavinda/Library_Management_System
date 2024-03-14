@@ -16,7 +16,7 @@
             <Image url="@../../assest/UserSignInPage.jpg" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="89.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="89.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -26,7 +26,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="87.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="87.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
       <Button layoutX="130.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnUserSignInOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
          <font>

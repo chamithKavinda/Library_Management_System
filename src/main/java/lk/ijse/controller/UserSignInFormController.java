@@ -3,7 +3,6 @@ package lk.ijse.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -22,7 +21,7 @@ public class UserSignInFormController {
     private AnchorPane userSignInPage;
 
     @FXML
-    private TextField txtUserName;
+    private TextField txtUserEmail;
 
     @FXML
     private TextField txtUserPassword;
@@ -30,23 +29,21 @@ public class UserSignInFormController {
     UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.USER_BO);
     @FXML
     void btnUserSignInOnAction(ActionEvent event) {
-        String UserName = txtUserName.getText();
+        String UserEmail = txtUserEmail.getText();
         String UserPassword = txtUserPassword.getText();
         try{
-            boolean userIsExist = userBO.isExistUser(UserName,UserPassword);
+            boolean userIsExist = userBO.IsExistUser(UserEmail,UserPassword);
             if(userIsExist){
-                navigateToUserDashboard(UserName, UserPassword);
+                navigateToUserDashboard(UserEmail, UserPassword);
 
-                UserBOImpl.logUserName = UserName;
+                UserBOImpl.logUserEmail = UserEmail;
                 UserBOImpl.logPassword = UserPassword;
 
             }else{
-                new Alert(Alert.AlertType.CONFIRMATION,"User Name Password is Wrong").show();
+                new Alert(Alert.AlertType.CONFIRMATION,"User Eamil Password is Wrong").show();
             }
-        }catch (SQLException | ClassNotFoundException throwable){
-            throwable.printStackTrace();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

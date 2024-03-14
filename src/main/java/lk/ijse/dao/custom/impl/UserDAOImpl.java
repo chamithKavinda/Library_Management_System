@@ -21,10 +21,7 @@ public class UserDAOImpl implements UserDAO {
         return userList;
     }
 
-    @Override
-    public String getEmail(String Email) throws SQLException, ClassNotFoundException {
-        return null;
-    }
+
     @Override
     public boolean save(User entity){
         Session session = SessionFactoryConfig.getInstance().getSession();
@@ -41,15 +38,15 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
-
-
     @Override
-    public boolean update(User user) throws SQLException {
+    public boolean update(User entity) throws SQLException {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
+
         try{
-            session.update(user);
+            session.update(entity);
             transaction.commit();
+
             return true;
         }catch (Exception e){
             transaction.rollback();
@@ -59,23 +56,23 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
-    @Override
-    public boolean exist(String UserName, String UserPassword) throws SQLException, ClassNotFoundException {
-        Session session = SessionFactoryConfig.getInstance().getSession();
-        try  {
-            String hql = "SELECT COUNT(*) FROM User WHERE user_name = :username AND user_password = :password";
-            Query<Long> query = session.createQuery(hql, Long.class);
-            query.setParameter("username", UserName);
-            query.setParameter("password", UserPassword);
-
-            Long count = query.uniqueResult();
-            return count != null && count > 0;
-        } catch (Exception e) {
-            // Handle exceptions
-            e.printStackTrace();
-            return false;
-        }
-    }
+//    @Override
+//    public boolean exist(String UserName, String UserPassword) throws SQLException, ClassNotFoundException {
+//        Session session = SessionFactoryConfig.getInstance().getSession();
+//        try  {
+//            String hql = "SELECT COUNT(*) FROM User WHERE user_name = :username AND user_password = :password";
+//            Query<Long> query = session.createQuery(hql, Long.class);
+//            query.setParameter("username", UserName);
+//            query.setParameter("password", UserPassword);
+//
+//            Long count = query.uniqueResult();
+//            return count != null && count > 0;
+//        } catch (Exception e) {
+//            // Handle exceptions
+//            e.printStackTrace();
+//            return false;
+//        }
+//    }
 
     @Override
     public boolean delete(String email) throws SQLException {
@@ -89,6 +86,20 @@ public class UserDAOImpl implements UserDAO {
         }catch (Exception e){
             transaction.rollback();
             return false;
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public User search(String email) {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+
+        try {
+            User user= session.get(User.class, email);
+            return user;
+        } catch (Exception e) {
+            return null;
         }finally {
             session.close();
         }

@@ -103,6 +103,7 @@ public class AdminUsersFormController {
         }catch (SQLException e){
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+        clearFields();
     }
 
     @FXML
@@ -124,8 +125,8 @@ public class AdminUsersFormController {
                     new Alert(Alert.AlertType.ERROR, "User not saved").show();
                 }
             }
-        } catch (SQLException | ClassNotFoundException throwables ){
-            throwables.printStackTrace();
+        } catch (Exception e){
+            e.printStackTrace();
         }
         clearFields();
         tblUser.refresh();
@@ -148,6 +149,6 @@ public class AdminUsersFormController {
         }catch (SQLException e){
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+        clearFields();
     }
-
 }
