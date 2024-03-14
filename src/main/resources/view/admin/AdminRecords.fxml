@@ -55,16 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="242.0" layoutY="451.0" mnemonicParsing="false" onAction="#btnUpdateOnaction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Update" textFill="WHITE">
-         <graphic>
-            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../assest/icons8-update-64.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="125.0" layoutY="496.0" mnemonicParsing="false" onAction="#btndeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+      <Button layoutX="241.0" layoutY="450.0" mnemonicParsing="false" onAction="#btndeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -73,7 +64,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="240.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+      <Button layoutX="184.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>

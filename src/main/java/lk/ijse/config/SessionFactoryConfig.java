@@ -1,9 +1,6 @@
 package lk.ijse.config;
 
-import lk.ijse.entity.Admin;
-import lk.ijse.entity.Books;
-import lk.ijse.entity.Branch;
-import lk.ijse.entity.User;
+import lk.ijse.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -22,6 +19,7 @@ public class SessionFactoryConfig {
                 .addAnnotatedClass(User.class)
                 .addAnnotatedClass(Books.class)
                 .addAnnotatedClass(Branch.class)
+                .addAnnotatedClass(Records.class)
                 .getMetadataBuilder()
                 .build();
         this.sessionFactory = metadata.buildSessionFactory();
