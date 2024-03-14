@@ -35,7 +35,8 @@ public class BooksDAOImpl implements BooksDAO {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.delete(id);
+            Books books = session.get(Books.class,id);
+            session.delete(books);
             transaction.commit();
             return true;
         }catch (Exception e){
