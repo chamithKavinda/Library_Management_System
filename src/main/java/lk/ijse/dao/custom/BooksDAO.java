@@ -8,5 +8,7 @@ import lk.ijse.entity.User;
 import java.util.List;
 
 public interface BooksDAO extends CrudDAO<Books> {
+
+    List<Books> getAll();
     boolean save(Books entity);
 }

@@ -11,7 +11,7 @@ public class BOFactory {
     }
 
     public enum BOTypes{
-        ADMIN_BO ,USER_BO ,BOOKS_BO
+        ADMIN_BO ,USER_BO ,BOOKS_BO,BRANCH_BO
     }
 
     public SuperBO getBO(BOTypes boTypes){
@@ -22,6 +22,8 @@ public class BOFactory {
                 return new UserBOImpl();
             case BOOKS_BO:
                 return new BooksBOImpl();
+            case BRANCH_BO:
+                return new BranchBOImpl();
             default:
                 return null;
         }

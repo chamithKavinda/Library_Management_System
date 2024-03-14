@@ -13,8 +13,9 @@ import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.BooksBO;
 import lk.ijse.dto.BooksDto;
+import lk.ijse.dto.UserDto;
 import lk.ijse.dto.tm.BooksTm;
-import lombok.var;
+import lk.ijse.dto.tm.UserTm;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -59,6 +60,40 @@ public class AdminBooksFormController {
 
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
 
+    public void initialize() {
+        setCellValueFactory();
+        loadAllBooks();
+    }
+
+    private void setCellValueFactory() {
+        colBookId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colTitle.setCellValueFactory(new PropertyValueFactory<>("title"));
+        colAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
+        colGenre.setCellValueFactory(new PropertyValueFactory<>("genre"));
+        colStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
+
+    private void loadAllBooks(){
+        ObservableList<BooksTm> obList = FXCollections.observableArrayList();
+
+        try{
+            List<BooksDto> dtoList = booksBO.getAllBooks();
+
+            for (BooksDto dto: dtoList){
+                obList.add(
+                        new BooksTm(
+                                dto.getId(),
+                                dto.getTitle(),
+                                dto.getAuthor(),
+                                dto.getGenre(),
+                                dto.getStatus()));
+            }
+            tblBooks.setItems(obList);
+            tblBooks.refresh();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
     @FXML
     void btnClearOnAction(ActionEvent event) {
         clearFields();
@@ -74,7 +109,18 @@ public class AdminBooksFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
+        String id = txtBookId.getText();
 
+        try{
+            boolean isDeleted = booksBO.deleteBooks(id);
+
+            if (isDeleted){
+                new Alert(Alert.AlertType.CONFIRMATION,"Books deleted!").show();
+                loadAllBooks();
+            }
+        }catch (SQLException e){
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
     }
 
     @FXML
@@ -91,7 +137,7 @@ public class AdminBooksFormController {
             boolean isSaved = booksBO.saveBooks(dto);
             if (isSaved){
                 new Alert(Alert.AlertType.CONFIRMATION, "Books Saved").show();
-               // loadAllBooks();
+                loadAllBooks();
             }else {
                 new Alert(Alert.AlertType.ERROR, "Books not saved").show();
             }
@@ -116,7 +162,7 @@ public class AdminBooksFormController {
             boolean isUpdated = booksBO.updateBooks(dto);
             if (isUpdated){
                 new Alert(Alert.AlertType.CONFIRMATION, "Books Updated!").show();
-              //  loadAllBooks();
+                loadAllBooks();
             }
         }catch (SQLException e){
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
