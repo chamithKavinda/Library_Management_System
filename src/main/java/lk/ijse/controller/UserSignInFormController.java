@@ -3,6 +3,7 @@ package lk.ijse.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -30,11 +31,10 @@ public class UserSignInFormController {
     void btnUserSignInOnAction(ActionEvent event) {
         String UserName = txtUserName.getText();
         String UserPassword = txtUserPassword.getText();
-        System.out.println("usersignin");
         try{
             boolean userIsExist = userBO.isExistUser(UserName,UserPassword);
             if(userIsExist){
-                navigateToUserDashboard();
+                navigateToUserDashboard(UserName, UserPassword);
             }else{
                 new Alert(Alert.AlertType.CONFIRMATION,"User Name Password is Wrong").show();
             }
@@ -45,14 +45,20 @@ public class UserSignInFormController {
         }
     }
 
-    private void navigateToUserDashboard() throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/user/UserDashboard.fxml"));
+    private void navigateToUserDashboard(String userName, String password) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/user/UserDashboard.fxml"));
+        AnchorPane anchorPane = loader.load();
+
+        UserDashboardFormController dashboardController = loader.getController();
+        dashboardController.setUserCredentials(userName, password);
+
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) userSignInPage.getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("User Dashboard");
         stage.centerOnScreen();
     }
+
 
     @FXML
     void hyperUserSignUpOnAction(ActionEvent event) throws IOException {

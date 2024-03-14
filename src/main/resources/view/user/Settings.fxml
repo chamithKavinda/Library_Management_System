@@ -118,8 +118,23 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Label fx:id="lblUserName" layoutX="106.0" layoutY="353.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" />
-      <Label fx:id="lblUserEmail" layoutX="105.0" layoutY="416.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" />
-      <Label fx:id="lblUserPassword" layoutX="104.0" layoutY="478.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblUserName" layoutX="106.0" layoutY="353.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Label fx:id="lblUserEmail" layoutX="105.0" layoutY="416.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Label fx:id="lblUserPassword" layoutX="104.0" layoutY="478.0" prefHeight="29.0" prefWidth="163.0" style="-fx-background-color: white;" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="112.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-username-30.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="111.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-password-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="113.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-email-24.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

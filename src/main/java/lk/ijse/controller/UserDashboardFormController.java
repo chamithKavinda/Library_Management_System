@@ -18,6 +18,12 @@ import java.util.Date;
 public class UserDashboardFormController {
 
     @FXML
+    private Label lblUserName;
+
+    @FXML
+    private Label lblUserPassword;
+
+    @FXML
     private Label date;
     private volatile boolean stop  = false;
 
@@ -35,7 +41,10 @@ public class UserDashboardFormController {
         TimeNow();
         Date();
     }
-
+    public void setUserCredentials(String userName, String password) {
+        lblUserName.setText("" + userName);
+        lblUserPassword.setText("" + password);
+    }
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
         AnchorPane anchorPane;

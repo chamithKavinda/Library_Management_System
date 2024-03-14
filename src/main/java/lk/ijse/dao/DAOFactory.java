@@ -1,9 +1,6 @@
 package lk.ijse.dao;
 
-import lk.ijse.dao.custom.impl.AdminDAOImpl;
-import lk.ijse.dao.custom.impl.BooksDAOImpl;
-import lk.ijse.dao.custom.impl.BranchDAOImpl;
-import lk.ijse.dao.custom.impl.UserDAOImpl;
+import lk.ijse.dao.custom.impl.*;
 
 public class DAOFactory {
     private static DAOFactory daoFactory;
