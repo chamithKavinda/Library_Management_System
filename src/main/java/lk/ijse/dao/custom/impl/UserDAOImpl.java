@@ -82,7 +82,8 @@ public class UserDAOImpl implements UserDAO {
         Session session = SessionFactoryConfig.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try{
-            session.delete(email);
+            User user = session.get(User.class, email);
+            session.delete(user);
             transaction.commit();
             return true;
         }catch (Exception e){

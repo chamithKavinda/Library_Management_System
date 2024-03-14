@@ -94,8 +94,9 @@ public class AdminUsersFormController {
 
         try{
             boolean isDeleted = userBO.deleteUser(email);
-
+            System.out.println("test");
             if (isDeleted){
+                System.out.println("test 1");
                 new Alert(Alert.AlertType.CONFIRMATION,"User deleted!").show();
                 loadAllUser();
             }

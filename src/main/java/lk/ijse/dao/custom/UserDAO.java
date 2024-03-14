@@ -10,6 +10,8 @@ public interface UserDAO extends CrudDAO<User> {
 
     List<User> getAll();
 
+    boolean delete(String email) throws SQLException;
+
     String getEmail(String Email)throws SQLException, ClassNotFoundException;
 
     boolean save(User entity);
