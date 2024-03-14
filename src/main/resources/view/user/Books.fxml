@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -14,37 +16,47 @@
 
 <AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BooksFormController">
    <children>
-      <TableView layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="575.0" stylesheets="@../../style/UserTables.css">
+      <TableView fx:id="tblBooks" layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="608.0">
          <columns>
-            <TableColumn text="Book Id" />
-            <TableColumn prefWidth="120.0" text="Title" />
-            <TableColumn prefWidth="120.0" text="Author" />
-            <TableColumn prefWidth="120.0" text="Genre" />
-            <TableColumn prefWidth="120.0" text="Status" />
+            <TableColumn fx:id="colBookId" text="Book Id" />
+            <TableColumn fx:id="colTitle" prefWidth="120.0" text="Title" />
+            <TableColumn fx:id="colAuthor" prefWidth="180.0" text="Author" />
+            <TableColumn fx:id="colGenre" prefWidth="120.0" text="Genre" />
+            <TableColumn fx:id="colStatus" prefWidth="120.0" text="Status" />
          </columns>
          <styleClass>
-            <String fx:value="ucolumn-header" />
-            <String fx:value="utable-cell" />
-            <String fx:value="utable-row-cell" />
+            <String fx:value="column-header" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
          </styleClass>
+         <stylesheets>
+            <URL value="@../../style/UserTables.css" />
+            <URL value="@../../style/TableView.css" />
+         </stylesheets>
       </TableView>
       <ImageView fitHeight="521.0" fitWidth="317.0" layoutX="737.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/Frame%201.png" />
          </image>
       </ImageView>
-      <ComboBox layoutX="802.0" layoutY="243.0" prefWidth="150.0" />
-      <Text fill="#0a1747" layoutX="841.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+      <ComboBox layoutX="802.0" layoutY="298.0" prefWidth="150.0" />
+      <Text fill="#0a1747" layoutX="841.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="827.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
+      <Text fill="#0a1747" layoutX="827.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <DatePicker layoutX="803.0" layoutY="319.0" prefWidth="150.0" />
-      <Button layoutX="828.0" layoutY="382.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+      <DatePicker layoutX="803.0" layoutY="363.0" prefWidth="150.0" />
+      <Button layoutX="828.0" layoutY="404.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+      <Text fill="#0a1747" layoutX="813.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id*" wrappingWidth="130.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="818.0" layoutY="231.0" prefHeight="30.0" prefWidth="112.0" />
    </children>
 </AnchorPane>

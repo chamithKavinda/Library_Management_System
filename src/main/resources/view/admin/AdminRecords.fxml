@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -29,14 +30,13 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="126.0" layoutY="201.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <Text fill="#0a1747" layoutX="129.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
       <TextField alignment="CENTER" layoutX="128.0" layoutY="273.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="128.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id*">
+      <Text fill="#0a1747" layoutX="128.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -92,7 +92,7 @@
          <columns>
             <TableColumn prefWidth="100.0" text="Transaction Id" />
             <TableColumn prefWidth="120.0" text="Book Id" />
-            <TableColumn prefWidth="120.0" text="User Id" />
+            <TableColumn prefWidth="120.0" text="User Email" />
             <TableColumn prefWidth="120.0" text="Return Date" />
             <TableColumn prefWidth="120.0" text="Date &amp; Time" />
          </columns>
@@ -102,7 +102,7 @@
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="132.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="135.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-transaction-30.png" />
          </image>
@@ -118,5 +118,6 @@
          </image>
       </ImageView>
       <DatePicker layoutX="125.0" layoutY="422.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Label layoutX="127.0" layoutY="202.0" prefHeight="25.0" prefWidth="214.0" />
    </children>
 </AnchorPane>
