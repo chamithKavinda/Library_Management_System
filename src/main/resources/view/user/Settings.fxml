@@ -69,24 +69,13 @@
             <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="805.0" layoutY="336.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="806.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="805.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="84.13671875">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Text>
-      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="804.0" layoutY="340.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="805.0" layoutY="270.0" stylesheets="@../../style/textField.css" />
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="808.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/icons8-password-24.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="810.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="806.0" layoutY="303.0" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="811.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-email-24.png" />
          </image>

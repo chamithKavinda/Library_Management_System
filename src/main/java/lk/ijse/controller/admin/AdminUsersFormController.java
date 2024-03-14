@@ -97,7 +97,7 @@ public class AdminUsersFormController {
             System.out.println("test");
             if (isDeleted){
                 System.out.println("test 1");
-                new Alert(Alert.AlertType.CONFIRMATION,"User deleted!").show();
+                new Alert(Alert.AlertType.CONFIRMATION,"User Account deleted Successfully!" ).show();
                 loadAllUser();
             }
         }catch (SQLException e){
@@ -142,7 +142,7 @@ public class AdminUsersFormController {
         try{
             boolean isUpdated = userBO.updateUser(dto);
             if (isUpdated){
-                new Alert(Alert.AlertType.CONFIRMATION, "User Updated!").show();
+                new Alert(Alert.AlertType.CONFIRMATION, "User Account Updated Successfully!").show();
                 loadAllUser();
             }
         }catch (SQLException e){
