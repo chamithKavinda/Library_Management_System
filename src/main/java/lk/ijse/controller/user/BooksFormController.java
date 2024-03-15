@@ -109,9 +109,8 @@ public class BooksFormController {
             dto.setReturnDate(String.valueOf(txtReturnDate.getValue()));
 
             boolean isSaved = recordsBO.saveRecord(dto);
-            System.out.println("hi 1");
+
             if (isSaved){
-                System.out.println("hi 2");
                 new Alert(Alert.AlertType.CONFIRMATION, "Book Borrowed Sucessfully!").show();
             }else {
                 new Alert(Alert.AlertType.ERROR, "Book Borrowed failed!").show();
