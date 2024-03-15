@@ -122,7 +122,7 @@
             <Label fx:id="lblUserPassword" alignment="CENTER" layoutX="780.0" layoutY="437.0" prefHeight="24.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747" />
             <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="785.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../assest/icons8-username-30.png" />
+                  <Image url="@../../assest/icons8-email-24.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="784.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">

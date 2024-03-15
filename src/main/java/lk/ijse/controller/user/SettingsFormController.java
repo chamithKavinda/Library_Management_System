@@ -60,7 +60,7 @@ public class SettingsFormController {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
 
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/user/UserSignUpPage.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/LoginDashboard.fxml"));
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) root1.getScene().getWindow();
         stage.setScene(scene);
