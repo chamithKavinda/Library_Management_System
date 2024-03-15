@@ -3,12 +3,11 @@ package lk.ijse.controller.user;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.BooksBO;
 import lk.ijse.bo.custom.RecordsBO;
@@ -16,8 +15,6 @@ import lk.ijse.dto.BooksDto;
 import lk.ijse.dto.RecordsDto;
 import lk.ijse.dto.tm.BooksTm;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -38,17 +35,19 @@ public class BooksFormController {
     private TableColumn<?, ?> colTitle;
 
     @FXML
+    private AnchorPane pane;
+
+    @FXML
     private TableView<BooksTm> tblBooks;
 
     @FXML
     private TextField txtBorrowBookId;
 
     @FXML
-
-    private DatePicker txtReturnDate;
+    private TextField txtBorrowUserEmail;
 
     @FXML
-    private TextField txtBorrowUserEmail;
+    private DatePicker txtReturnDate;
 
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
 
@@ -87,17 +86,18 @@ public class BooksFormController {
             throw new RuntimeException(e);
         }
     }
-
-    public void btnSaveOnAction1(javafx.event.ActionEvent actionEvent) {
+    @FXML
+    public void btnSaveOnAction(ActionEvent actionEvent) {
         try{
             RecordsDto dto = new RecordsDto();
-
             dto.setId(txtBorrowBookId.getText());
-            dto.setEmail(txtBorrowBookId.getText());
+            dto.setEmail(txtBorrowUserEmail.getText());
             dto.setReturnDate(txtReturnDate.getAccessibleText());
 
             boolean isSaved = recordsBO.saveRecord(dto);
+            System.out.println("hi 1");
             if (isSaved){
+                System.out.println("hi 2");
                 new Alert(Alert.AlertType.CONFIRMATION, "Book Borrowed Sucessfully!").show();
             }else {
                 new Alert(Alert.AlertType.ERROR, "Book Borrowed failed!").show();
@@ -105,6 +105,6 @@ public class BooksFormController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
-
     }
+
 }

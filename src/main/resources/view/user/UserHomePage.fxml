@@ -44,18 +44,18 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label fx:id="lblUserName" alignment="CENTER" layoutX="791.0" layoutY="379.0" prefHeight="24.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747">
+      <Label fx:id="lblUserName" alignment="CENTER" layoutX="771.0" layoutY="379.0" prefHeight="24.0" prefWidth="180.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserPassword" alignment="CENTER" layoutX="790.0" layoutY="447.0" prefHeight="24.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747" />
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="795.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="lblUserPassword" alignment="CENTER" layoutX="770.0" layoutY="447.0" prefHeight="24.0" prefWidth="180.0" styleClass="text-field" stylesheets="@../../style/textField.css" textFill="#0a1747" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="775.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="794.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="774.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
          </image>

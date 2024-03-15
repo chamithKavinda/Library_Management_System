@@ -45,7 +45,7 @@
          </font>
       </Text>
       <DatePicker fx:id="txtReturnDate" layoutX="693.0" layoutY="220.0" prefWidth="150.0" />
-      <Button layoutX="719.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnSaveOnAction1" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+      <Button layoutX="719.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
       <Text fill="#0a1747" layoutX="928.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*" wrappingWidth="100.8033447265625">
          <font>
             <Font name="System Bold" size="18.0" />
@@ -59,13 +59,13 @@
       </Text>
       <TextField alignment="CENTER" layoutX="906.0" layoutY="216.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
       <Button layoutX="928.0" layoutY="270.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
-      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="695.0" layoutY="151.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtBorrowBookId" alignment="CENTER" layoutX="695.0" layoutY="151.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
       <ImageView fitHeight="339.0" fitWidth="341.0" layoutX="708.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/image-removebg-preview.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="695.0" layoutY="80.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtBorrowUserEmail" alignment="CENTER" layoutX="695.0" layoutY="80.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
       <Text fill="#0a1747" layoutX="721.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*" wrappingWidth="108.0">
          <font>
             <Font name="System Bold" size="18.0" />
