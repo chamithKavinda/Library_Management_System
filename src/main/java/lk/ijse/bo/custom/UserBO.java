@@ -15,7 +15,7 @@ public interface UserBO extends SuperBO {
 
     boolean updateUser( UserDto dto) throws SQLException;
 
-    boolean IsExistUser(String UserEmail,String UserPassword);
+    boolean IsExistUser(String UserEmail,String UserPassword ,String UserName);
 
     boolean getEmail(String email);
 

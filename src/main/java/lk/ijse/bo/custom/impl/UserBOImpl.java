@@ -16,6 +16,8 @@ public class UserBOImpl implements UserBO {
    public static String logUserEmail;
    public static String logPassword;
 
+   public static String logUserName;
+
     @Override
     public List<UserDto> getAllUsers() throws SQLException {
         List<User> entityList = userDAO.getAll();
@@ -54,7 +56,7 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public boolean IsExistUser(String UserEmail, String UserPassword) {
+    public boolean IsExistUser(String UserEmail, String UserPassword , String UserName) {
         User search = userDAO.search(UserEmail);
         if (search != null) {
             if (search.getPassword().equals(UserPassword)) {

@@ -3,11 +3,10 @@
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -34,24 +33,41 @@
             <URL value="@../../style/TableView.css" />
          </stylesheets>
       </TableView>
-      <ImageView fitHeight="521.0" fitWidth="317.0" layoutX="737.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="317.0" fitWidth="263.0" layoutX="768.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/Frame%201.png" />
          </image>
       </ImageView>
-      <ComboBox layoutX="802.0" layoutY="262.0" prefWidth="150.0" />
-      <Text fill="#0a1747" layoutX="841.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+      <Text fill="#0a1747" layoutX="841.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="827.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
+      <Text fill="#0a1747" layoutX="827.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <DatePicker layoutX="803.0" layoutY="327.0" prefWidth="150.0" />
-      <Button layoutX="828.0" layoutY="382.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
-      <Label layoutX="818.0" layoutY="231.0" prefHeight="30.0" prefWidth="112.0" />
+      <DatePicker layoutX="803.0" layoutY="177.0" prefWidth="150.0" />
+      <Button layoutX="828.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+      <ImageView fitHeight="317.0" fitWidth="263.0" layoutX="770.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/Frame%201.png" />
+         </image>
+      </ImageView>
+      <Text fill="#0a1747" layoutX="842.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id*" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="805.0" layoutY="395.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="839.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="807.0" layoutY="461.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Button layoutX="829.0" layoutY="501.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
+      <TextField layoutX="804.0" layoutY="113.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
    </children>
 </AnchorPane>

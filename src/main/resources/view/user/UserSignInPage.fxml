@@ -16,38 +16,38 @@
             <Image url="@../../assest/UserSignInPage.jpg" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="89.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="89.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="87.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="87.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Text>
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="87.0" layoutY="143.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="88.0" layoutY="211.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
-      <Button layoutX="130.0" layoutY="257.0" mnemonicParsing="false" onAction="#btnUserSignInOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="87.0" layoutY="181.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserPassword" alignment="CENTER" layoutX="88.0" layoutY="244.0" prefHeight="25.0" prefWidth="165.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="130.0" layoutY="295.0" mnemonicParsing="false" onAction="#btnUserSignInOnAction" prefHeight="25.0" prefWidth="84.0" style="-fx-border-radius: 12;" styleClass="loginDashboard-button" stylesheets="@../../style/LoginDashboard.css" text="Sign In">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Text fill="#0a1747" layoutX="87.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?" wrappingWidth="149.0">
+      <Text fill="#0a1747" layoutX="87.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account ?" wrappingWidth="149.0">
          <font>
             <Font size="11.0" />
          </font>
       </Text>
-      <Hyperlink layoutX="203.0" layoutY="299.0" onAction="#hyperUserSignUpOnAction" text="Sign Up" textFill="#0a1747">
+      <Hyperlink layoutX="202.0" layoutY="337.0" onAction="#hyperUserSignUpOnAction" text="Sign Up" textFill="#0a1747">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Hyperlink>
-      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="93.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="93.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assest/icons8-username-30.png" />
+            <Image url="@../../assest/icons8-email-24.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="93.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="93.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
          </image>
@@ -61,5 +61,16 @@
             </ImageView>
          </graphic>
       </Button>
+      <Text fill="#0a1747" layoutX="88.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserName" alignment="CENTER" layoutX="88.0" layoutY="113.0" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="92.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/icons8-username-30.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -12,6 +12,8 @@ import lk.ijse.bo.custom.BooksBO;
 import lk.ijse.dto.BooksDto;
 import lk.ijse.dto.tm.BooksTm;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -33,6 +35,7 @@ public class BooksFormController {
 
     @FXML
     private TableView<BooksTm> tblBooks;
+
 
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
     public void initialize() {
@@ -69,6 +72,7 @@ public class BooksFormController {
             throw new RuntimeException(e);
         }
     }
+
 
 
 

@@ -64,13 +64,13 @@
             </ImageView>
          </graphic>
       </Button>
-      <TableView fx:id="tblRecords" layoutX="460.0" layoutY="128.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
+      <TableView fx:id="tblRecords" layoutX="428.0" layoutY="128.0" prefHeight="476.0" prefWidth="657.0" stylesheets="@../../style/TableView.css">
          <columns>
             <TableColumn fx:id="colTransactionId" prefWidth="100.0" text="Transaction Id" />
             <TableColumn fx:id="colBookId" prefWidth="120.0" text="Book Id" />
-            <TableColumn fx:id="colUserName" prefWidth="120.0" text="User Email" />
+            <TableColumn fx:id="colUserName" prefWidth="150.0" text="User Email" />
             <TableColumn fx:id="colReturnDate" prefWidth="120.0" text="Return Date" />
-            <TableColumn fx:id="colDateTime" prefWidth="120.0" text="Date &amp; Time" />
+            <TableColumn fx:id="colDateTime" prefWidth="160.0" text="Date &amp; Time" />
          </columns>
          <styleClass>
             <String fx:value="column-header" />
@@ -89,7 +89,7 @@
          </image>
       </ImageView>
       <DatePicker fx:id="txtReturnDate" layoutX="125.0" layoutY="396.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <TextField fx:id="txtUserEmail1" alignment="CENTER" layoutX="704.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtTransactionId" alignment="CENTER" layoutX="704.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <Button layoutX="951.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">

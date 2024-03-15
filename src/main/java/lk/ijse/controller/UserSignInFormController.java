@@ -13,7 +13,6 @@ import lk.ijse.bo.custom.UserBO;
 import lk.ijse.bo.custom.impl.UserBOImpl;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 public class UserSignInFormController {
 
@@ -26,33 +25,38 @@ public class UserSignInFormController {
     @FXML
     private TextField txtUserPassword;
 
+    @FXML
+    private TextField txtUserName;
+
     UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.USER_BO);
     @FXML
     void btnUserSignInOnAction(ActionEvent event) {
         String UserEmail = txtUserEmail.getText();
         String UserPassword = txtUserPassword.getText();
+        String UserName = txtUserName.getText();
         try{
-            boolean userIsExist = userBO.IsExistUser(UserEmail,UserPassword);
+            boolean userIsExist = userBO.IsExistUser(UserEmail,UserPassword,UserName);
             if(userIsExist){
-                navigateToUserDashboard(UserEmail, UserPassword);
+                navigateToUserDashboard(UserEmail, UserPassword,UserName);
 
                 UserBOImpl.logUserEmail = UserEmail;
                 UserBOImpl.logPassword = UserPassword;
+                UserBOImpl.logUserName = UserName;
 
             }else{
-                new Alert(Alert.AlertType.CONFIRMATION,"User Eamil Password is Wrong").show();
+                new Alert(Alert.AlertType.CONFIRMATION,"User Eamil Password UserName is Wrong").show();
             }
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    private void navigateToUserDashboard(String userName, String password) throws IOException {
+    private void navigateToUserDashboard(String email, String password, String UserName) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/user/UserDashboard.fxml"));
         AnchorPane anchorPane = loader.load();
 
         UserDashboardFormController dashboardController = loader.getController();
-        dashboardController.setUserCredentials(userName, password);
+        dashboardController.setUserCredentials(email, password , UserName);
 
         Scene scene = new Scene(anchorPane);
         Stage stage = (Stage) userSignInPage.getScene().getWindow();

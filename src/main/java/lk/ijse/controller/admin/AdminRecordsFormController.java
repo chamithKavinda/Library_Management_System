@@ -43,6 +43,9 @@ public class AdminRecordsFormController {
     @FXML
     private TextField txtUserEmail;
 
+    @FXML
+    private TextField txtTransactionId;
+
     RecordsBO recordsBO = (RecordsBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RECORDS_BO);
 
     public void initialize() {
@@ -86,7 +89,7 @@ public class AdminRecordsFormController {
 
             dto.setId(txtBookId.getText());
             dto.setEmail(txtUserEmail.getText());
-            dto.setReturnDate(txtReturnDate.getId());
+            dto.setReturnDate(txtReturnDate.getAccessibleText());
 
 
             boolean isSaved = recordsBO.saveRecord(dto);
@@ -105,7 +108,7 @@ public class AdminRecordsFormController {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-        String t_id = txtUserEmail.getText();
+        String t_id = txtTransactionId.getText();
 
         try{
             boolean isDeleted = recordsBO.deleteRecord(t_id);
@@ -117,6 +120,12 @@ public class AdminRecordsFormController {
         }catch (SQLException e){
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
         }
+        clearFields1();
+        tblRecords.refresh();
+    }
+
+    private void clearFields1() {
+        txtTransactionId.setText("");
     }
 
     @FXML

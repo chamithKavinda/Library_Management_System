@@ -34,7 +34,7 @@
             <Image url="@../../assest/836-removebg-preview.png" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="816.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+      <Text fill="#0a1747" layoutX="816.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

@@ -67,7 +67,7 @@
             <Image url="@../../assest/836-removebg-preview.png" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="149.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="84.13671875">
+      <Text fill="#0a1747" layoutX="149.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email" wrappingWidth="84.13671875">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -87,6 +87,11 @@
       <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="113.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-password-24.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="345.0" fitWidth="372.0" layoutX="704.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assest/Account%20settings.png" />
          </image>
       </ImageView>
    </children>

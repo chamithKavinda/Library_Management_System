@@ -66,6 +66,16 @@
                   <Image url="@../../assest/Logo.jpg" />
                </image>
             </ImageView>
+            <Text fill="#0a1747" layoutX="-338.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hi '" wrappingWidth="108.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblUserNameHeading" layoutX="-268.0" layoutY="27.0" prefHeight="40.0" prefWidth="488.0" textFill="#0a1747">
+               <font>
+                  <Font name="System Bold" size="38.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="pane" layoutX="264.0" layoutY="72.0" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;">
@@ -95,7 +105,7 @@
                   <Image url="@../../assest/836-removebg-preview.png" />
                </image>
             </ImageView>
-            <Text fill="#0a1747" layoutX="806.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+            <Text fill="#0a1747" layoutX="806.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
