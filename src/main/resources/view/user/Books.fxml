@@ -4,6 +4,7 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -16,7 +17,7 @@
 
 <AnchorPane fx:id="pane" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.BooksFormController">
    <children>
-      <TableView fx:id="tblBooks" layoutX="40.0" layoutY="71.0" prefHeight="476.0" prefWidth="608.0">
+      <TableView fx:id="tblBooks" layoutX="40.0" layoutY="102.0" prefHeight="476.0" prefWidth="608.0">
          <columns>
             <TableColumn fx:id="colBookId" text="Book Id" />
             <TableColumn fx:id="colTitle" prefWidth="120.0" text="Title" />
@@ -51,14 +52,14 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="905.0" layoutY="150.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtReturnUserEmail" alignment="CENTER" layoutX="905.0" layoutY="150.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
       <Text fill="#0a1747" layoutX="938.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <TextField alignment="CENTER" layoutX="906.0" layoutY="216.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
-      <Button layoutX="928.0" layoutY="270.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
+      <TextField fx:id="txtReturnBookId" alignment="CENTER" layoutX="906.0" layoutY="216.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Button layoutX="928.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnReturnBookOnAction" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
       <TextField fx:id="txtBorrowBookId" alignment="CENTER" layoutX="695.0" layoutY="151.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
       <ImageView fitHeight="339.0" fitWidth="341.0" layoutX="708.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -72,5 +73,12 @@
          </font>
       </Text>
       <Line endY="280.0" layoutX="878.0" layoutY="48.0" startY="-30.66666603088379" />
+      <Label layoutX="43.0" layoutY="53.0" prefHeight="32.0" prefWidth="210.0" text="Search Book Here &gt;" textFill="#0a1747">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBookSearch" alignment="TOP_LEFT" layoutX="265.0" layoutY="56.0" onAction="#txtBookSearchOnAction" prefHeight="29.0" prefWidth="378.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Button layoutX="543.0" layoutY="57.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Search" textFill="WHITE" />
    </children>
 </AnchorPane>

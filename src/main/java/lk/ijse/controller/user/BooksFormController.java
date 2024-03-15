@@ -3,6 +3,7 @@ package lk.ijse.controller.user;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -19,6 +20,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class BooksFormController {
+
+    @FXML
+    private TextField txtBookSearch;
+
     @FXML
     private TableColumn<?, ?> colAuthor;
 
@@ -33,6 +38,12 @@ public class BooksFormController {
 
     @FXML
     private TableColumn<?, ?> colTitle;
+
+    @FXML
+    private TextField txtReturnBookId;
+
+    @FXML
+    private TextField txtReturnUserEmail;
 
     @FXML
     private AnchorPane pane;
@@ -52,6 +63,9 @@ public class BooksFormController {
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
 
     RecordsBO recordsBO = (RecordsBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.RECORDS_BO);
+
+
+
     public void initialize() {
         setCellValueFactory();
         loadAllBooks();
@@ -92,7 +106,7 @@ public class BooksFormController {
             RecordsDto dto = new RecordsDto();
             dto.setId(txtBorrowBookId.getText());
             dto.setEmail(txtBorrowUserEmail.getText());
-            dto.setReturnDate(txtReturnDate.getAccessibleText());
+            dto.setReturnDate(String.valueOf(txtReturnDate.getValue()));
 
             boolean isSaved = recordsBO.saveRecord(dto);
             System.out.println("hi 1");
@@ -105,6 +119,38 @@ public class BooksFormController {
         }catch (SQLException throwables){
             throwables.printStackTrace();
         }
+    }
+
+    @FXML
+    void btnReturnBookOnAction(ActionEvent event) {
+
+
+
+
+
+    }
+
+
+    @FXML
+    void txtBookSearchOnAction(ActionEvent event) {
+        FilteredList<BooksTm> filteredData = new FilteredList<>(tblBooks.getItems(), b -> true);
+
+        txtBookSearch.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(booksTm -> {
+                if (newValue == null || newValue.isBlank()) {
+                    return true;
+                }
+
+                String searchKeyword = newValue.toLowerCase();
+
+                return booksTm.getId().toLowerCase().contains(searchKeyword) ||
+                        booksTm.getTitle().toLowerCase().contains(searchKeyword) ||
+                        booksTm.getAuthor().toLowerCase().contains(searchKeyword) ||
+                        booksTm.getGenre().toLowerCase().contains(searchKeyword) ||
+                        booksTm.getStatus().toLowerCase().contains(searchKeyword) ;
+            });
+        });
+        tblBooks.setItems(filteredData);
     }
 
 }

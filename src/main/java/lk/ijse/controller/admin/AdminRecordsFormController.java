@@ -89,7 +89,7 @@ public class AdminRecordsFormController {
 
             dto.setId(txtBookId.getText());
             dto.setEmail(txtUserEmail.getText());
-            dto.setReturnDate(txtReturnDate.getAccessibleText());
+            dto.setReturnDate(String.valueOf(txtReturnDate.getValue()));
 
 
             boolean isSaved = recordsBO.saveRecord(dto);
