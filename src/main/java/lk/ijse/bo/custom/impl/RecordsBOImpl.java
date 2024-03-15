@@ -58,5 +58,16 @@ public class RecordsBOImpl implements RecordsBO {
                 user));
     }
 
+    @Override
+    public boolean returnBook(String returnBookId, String returnUserEmail) throws SQLException {
+        Books search = booksDAO.search(returnBookId);
+        search.setStatus("Available");
+        boolean update = booksDAO.update(search);
+        if (update){
+            return true;
+        }
+        return false;
+    }
+
 
 }

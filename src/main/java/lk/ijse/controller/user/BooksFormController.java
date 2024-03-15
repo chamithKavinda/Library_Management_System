@@ -122,11 +122,11 @@ public class BooksFormController {
     }
 
     @FXML
-    void btnReturnBookOnAction(ActionEvent event) {
+    void btnReturnBookOnAction(ActionEvent event) throws SQLException {
+        String returnBookId = txtReturnBookId.getText();
+        String returnUserEmail = txtReturnUserEmail.getText();
 
-
-
-
+        recordsBO.returnBook(returnBookId,returnUserEmail);
 
     }
 

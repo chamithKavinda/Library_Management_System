@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.RecordsBO;
+import lk.ijse.bo.custom.impl.UserBOImpl;
 import lk.ijse.dto.RecordsDto;
 import lk.ijse.dto.tm.RecordsTm;
 
@@ -56,13 +57,15 @@ public class HistoryFormController {
             List<RecordsDto> dtoList = recordsBO.getAllRecords();
 
             for (RecordsDto dto: dtoList){
-                obList.add(
-                        new RecordsTm(
-                                dto.getT_id(),
-                                dto.getId(),
-                                dto.getEmail(),
-                                dto.getReturnDate(),
-                                dto.getBorrowDateTime()));
+                if (dto.getEmail().equals(UserBOImpl.logUserEmail)){
+                    obList.add(
+                            new RecordsTm(
+                                    dto.getT_id(),
+                                    dto.getId(),
+                                    dto.getEmail(),
+                                    dto.getReturnDate(),
+                                    dto.getBorrowDateTime()));
+                }
             }
             tblRecords.setItems(obList);
             tblRecords.refresh();

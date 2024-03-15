@@ -31,9 +31,9 @@ public class BooksDAOImpl implements BooksDAO {
     }
 
     @Override
-    public Books search(String id) {
+    public Books search(String id)  {
         Session session = SessionFactoryConfig.getInstance().getSession();
-
+        System.out.println(id);
         try {
             Books books= session.get(Books.class, id);
             return books;

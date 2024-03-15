@@ -12,4 +12,6 @@ public interface RecordsBO extends SuperBO {
     boolean deleteRecord(String t_id) throws SQLException;
 
     boolean saveRecord(RecordsDto dto) throws SQLException;
+
+    boolean returnBook(String returnBookId, String returnUserEmail) throws SQLException;
 }
