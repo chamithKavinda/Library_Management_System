@@ -41,13 +41,14 @@ public class BooksFormController {
     private TableView<BooksTm> tblBooks;
 
     @FXML
-    private TextField txtBookId;
+    private TextField txtBorrowBookId;
 
     @FXML
+
     private DatePicker txtReturnDate;
 
     @FXML
-    private TextField txtUserEmail;
+    private TextField txtBorrowUserEmail;
 
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
 
@@ -88,11 +89,11 @@ public class BooksFormController {
     }
 
     public void btnSaveOnAction1(javafx.event.ActionEvent actionEvent) {
-        /*try{
+        try{
             RecordsDto dto = new RecordsDto();
 
-            dto.setId(txtBookId.getText());
-            dto.setEmail(txtUserEmail.getText());
+            dto.setId(txtBorrowBookId.getText());
+            dto.setEmail(txtBorrowBookId.getText());
             dto.setReturnDate(txtReturnDate.getAccessibleText());
 
             boolean isSaved = recordsBO.saveRecord(dto);
@@ -103,7 +104,7 @@ public class BooksFormController {
             }
         }catch (SQLException throwables){
             throwables.printStackTrace();
-        }*/
+        }
 
     }
 }

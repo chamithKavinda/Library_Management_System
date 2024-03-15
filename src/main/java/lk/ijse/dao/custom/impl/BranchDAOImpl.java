@@ -3,7 +3,6 @@ package lk.ijse.dao.custom.impl;
 import lk.ijse.config.SessionFactoryConfig;
 import lk.ijse.dao.custom.BranchDAO;
 import lk.ijse.entity.Branch;
-import lk.ijse.entity.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -66,6 +65,20 @@ public class BranchDAOImpl implements BranchDAO {
         }catch (Exception e){
             transaction.rollback();
             return false;
+        }finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public Branch search(String id) {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+
+        try {
+            Branch branch= session.get(Branch.class, id);
+            return branch;
+        } catch (Exception e) {
+            return null;
         }finally {
             session.close();
         }

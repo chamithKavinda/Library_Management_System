@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import lk.ijse.bo.BOFactory;
 import lk.ijse.bo.custom.BooksBO;
 import lk.ijse.dto.BooksDto;
@@ -37,6 +38,9 @@ public class AdminBooksFormController {
 
     @FXML
     private TableView<BooksTm> tblBooks;
+
+    @FXML
+    private AnchorPane pane;
 
 
     @FXML
@@ -121,6 +125,7 @@ public class AdminBooksFormController {
 
     @FXML
     void btnSaveOnAction(ActionEvent event) {
+
         try{
             BooksDto dto = new BooksDto();
 
@@ -143,6 +148,7 @@ public class AdminBooksFormController {
         clearFields();
         tblBooks.refresh();
     }
+
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {

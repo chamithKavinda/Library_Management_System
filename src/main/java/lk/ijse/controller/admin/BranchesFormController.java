@@ -158,4 +158,30 @@ public class BranchesFormController {
         }
     }
 
+    @FXML
+    void txtSearchOnAction(ActionEvent event) {
+        String id = txtBranchId.getText();
+
+
+        try {
+            BranchDto dto = branchBO.searchBranch(id);
+
+            if (dto != null) {
+                fillFields(dto);
+            } else {
+                new Alert(Alert.AlertType.INFORMATION, "Branch not found!").show();
+                loadAllBranch();
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+    }
+
+    private void fillFields(BranchDto dto) {
+        txtBranchId.setText(dto.getId());
+        txtBranchName.setText(dto.getName());
+        txtContact.setText(dto.getContact());
+        txtCity.setText(dto.getCity());
+    }
+
 }

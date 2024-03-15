@@ -55,4 +55,10 @@ public class BranchBOImpl implements BranchBO {
                 dto.getContact(),
                 dto.getCity()));
     }
+
+    @Override
+    public BranchDto searchBranch(String id) throws SQLException {
+        Branch branch = branchDAO.search(id);
+        return new BranchDto(branch.getId(), branch.getName(), branch.getContact(), branch.getCity());
+    }
 }

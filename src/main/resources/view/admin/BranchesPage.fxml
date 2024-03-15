@@ -79,7 +79,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txtBranchId" alignment="CENTER" layoutX="126.0" layoutY="196.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtBranchId" alignment="CENTER" layoutX="126.0" layoutY="196.0" onAction="#txtSearchOnAction" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtBranchName" alignment="CENTER" layoutX="125.0" layoutY="266.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtContact" alignment="CENTER" layoutX="126.0" layoutY="335.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
       <TextField fx:id="txtCity" alignment="CENTER" layoutX="126.0" layoutY="403.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />

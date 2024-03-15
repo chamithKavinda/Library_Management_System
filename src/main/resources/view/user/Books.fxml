@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.BooksFormController">
+<AnchorPane fx:id="pane" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.BooksFormController">
    <children>
       <TableView fx:id="tblBooks" layoutX="40.0" layoutY="71.0" prefHeight="476.0" prefWidth="608.0">
          <columns>
