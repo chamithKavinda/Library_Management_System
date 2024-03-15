@@ -24,19 +24,19 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="129.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
+      <Text fill="#0a1747" layoutX="129.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="128.0" layoutY="229.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="128.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
+      <TextField fx:id="txtBookId" alignment="CENTER" layoutX="128.0" layoutY="247.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="128.0" layoutY="303.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="128.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*">
+      <TextField fx:id="txtUserEmail" alignment="CENTER" layoutX="128.0" layoutY="321.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="128.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -46,7 +46,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Text>
-      <Button layoutX="126.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
+      <Button layoutX="126.0" layoutY="468.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Add" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -55,16 +55,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="241.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
-         <graphic>
-            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../assest/icons8-delete-30.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Button layoutX="184.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
+      <Button layoutX="244.0" layoutY="466.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Clear" textFill="WHITE">
          <graphic>
             <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -87,16 +78,31 @@
             <String fx:value="table-row-cell" />
          </styleClass>
       </TableView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="134.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="134.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-bookstore-32.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="133.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="27.0" fitWidth="20.0" layoutX="133.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../assest/icons8-id-48.png" />
          </image>
       </ImageView>
-      <DatePicker fx:id="txtReturnDate" layoutX="125.0" layoutY="378.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <DatePicker fx:id="txtReturnDate" layoutX="125.0" layoutY="396.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <TextField fx:id="txtUserEmail1" alignment="CENTER" layoutX="704.0" layoutY="71.0" prefHeight="25.0" prefWidth="214.0" stylesheets="@../../style/textField.css" />
+      <Button layoutX="951.0" layoutY="72.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="4.0" prefWidth="98.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Delete" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assest/icons8-delete-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text fill="#0a1747" layoutX="552.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction Id*">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

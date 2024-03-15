@@ -11,10 +11,14 @@ import java.sql.Timestamp;
 @Data
 public class RecordsTm {
     private int t_id;
-    private String returnDate ;
-    private Timestamp BorrowDateTime;
-
     private String id;
-
     private String email;
+    private String returnDate ;
+    private String BorrowDateTime;
+
+
+
+
+
+
 }

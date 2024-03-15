@@ -19,13 +19,6 @@ public class Records {
     @Column(name = "transaction_id")
     private int t_id;
 
-    @Column(name = "return_date")
-    private String returnDate ;
-
-    @CreationTimestamp
-    @Column(name = "borrow_date_time")
-    private Timestamp BorrowDateTime;
-
     @ManyToOne
     @JoinColumn(name = "book_id",nullable = false)
     private Books id;
@@ -33,6 +26,14 @@ public class Records {
     @ManyToOne
     @JoinColumn(name = "user_email",nullable = false)
     private User email;
+
+    @Column(name = "return_date")
+    private String returnDate ;
+
+    @CreationTimestamp
+    @Column(name = "borrow_date_time")
+    private Timestamp BorrowDateTime;
+
 
     public Records(String returnDate, Books id, User email) {
         this.returnDate = returnDate;

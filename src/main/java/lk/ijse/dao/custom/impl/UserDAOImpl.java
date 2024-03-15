@@ -56,24 +56,6 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
-//    @Override
-//    public boolean exist(String UserName, String UserPassword) throws SQLException, ClassNotFoundException {
-//        Session session = SessionFactoryConfig.getInstance().getSession();
-//        try  {
-//            String hql = "SELECT COUNT(*) FROM User WHERE user_name = :username AND user_password = :password";
-//            Query<Long> query = session.createQuery(hql, Long.class);
-//            query.setParameter("username", UserName);
-//            query.setParameter("password", UserPassword);
-//
-//            Long count = query.uniqueResult();
-//            return count != null && count > 0;
-//        } catch (Exception e) {
-//            // Handle exceptions
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
-
     @Override
     public boolean delete(String email) throws SQLException {
         Session session = SessionFactoryConfig.getInstance().getSession();

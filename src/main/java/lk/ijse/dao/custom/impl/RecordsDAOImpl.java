@@ -6,15 +6,22 @@ import lk.ijse.entity.Books;
 import lk.ijse.entity.Records;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class RecordsDAOImpl implements RecordsDAO {
     @Override
-    public List<Records> getAll() throws SQLException {
-        return null;
+    public List<Records> getAll() {
+        Session session = SessionFactoryConfig.getInstance().getSession();
+        String hql = "FROM Records";
+        Query query = session.createQuery(hql);
+        List<Records> userList = query.list();
+        session.close();
+        return userList;
     }
+
 
     @Override
     public boolean save(Records records) throws SQLException {
@@ -54,8 +61,6 @@ public class RecordsDAOImpl implements RecordsDAO {
             session.close();
         }
     }
-
-
 
     @Override
     public boolean update(Records records) throws SQLException {
