@@ -37,6 +37,10 @@ public class BooksFormController {
     @FXML
     private TableView<BooksTm> tblBooks;
 
+    @FXML
+    private TextField txtBookId;
+
+
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
     public void initialize() {
         setCellValueFactory();

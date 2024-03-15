@@ -14,13 +14,13 @@
             <Font name="System Bold" size="38.0" />
          </font>
       </Text>
-      <TableView fx:id="tblRecords" layoutX="236.0" layoutY="127.0" prefHeight="476.0" prefWidth="597.0" stylesheets="@../../style/TableView.css">
+      <TableView fx:id="tblRecords" layoutX="208.0" layoutY="127.0" prefHeight="476.0" prefWidth="654.0" stylesheets="@../../style/TableView.css">
          <columns>
-            <TableColumn prefWidth="100.0" text="Transaction Id" />
-            <TableColumn prefWidth="120.0" text="Book Id" />
-            <TableColumn prefWidth="120.0" text="User Id" />
-            <TableColumn prefWidth="120.0" text="Return Date" />
-            <TableColumn prefWidth="120.0" text="Date &amp; Time" />
+            <TableColumn fx:id="colTransactionId" prefWidth="100.0" text="Transaction Id" />
+            <TableColumn fx:id="colBookId" prefWidth="120.0" text="Book Id" />
+            <TableColumn fx:id="colUserName" prefWidth="150.0" text="User Email" />
+            <TableColumn fx:id="colReturnDate" prefWidth="120.0" text="Return Date" />
+            <TableColumn fx:id="colDateTime" prefWidth="150.0" text="Date &amp; Time" />
          </columns>
          <styleClass>
             <String fx:value="column-header" />
