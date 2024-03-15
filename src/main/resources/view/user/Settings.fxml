@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="root1" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SettingsFormController">
+<AnchorPane fx:id="root1" prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.SettingsFormController">
    <children>
       <Text fill="#0a1747" layoutX="64.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings" wrappingWidth="331.13671875">
          <font>

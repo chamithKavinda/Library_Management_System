@@ -1,4 +1,4 @@
-package lk.ijse.controller;
+package lk.ijse.controller.user;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;

@@ -1,9 +1,10 @@
-package lk.ijse.controller;
+package lk.ijse.controller.user;
 
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -35,7 +36,6 @@ public class BooksFormController {
 
     @FXML
     private TableView<BooksTm> tblBooks;
-
 
     BooksBO booksBO = (BooksBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.BOOKS_BO);
     public void initialize() {
@@ -72,6 +72,7 @@ public class BooksFormController {
             throw new RuntimeException(e);
         }
     }
+
 
 
 

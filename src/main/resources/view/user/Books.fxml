@@ -10,12 +10,13 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BooksFormController">
+<AnchorPane prefHeight="634.0" prefWidth="1086.0" style="-fx-background-color: BFD7EE;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.user.BooksFormController">
    <children>
-      <TableView fx:id="tblBooks" layoutX="40.0" layoutY="122.0" prefHeight="476.0" prefWidth="608.0">
+      <TableView fx:id="tblBooks" layoutX="40.0" layoutY="71.0" prefHeight="476.0" prefWidth="608.0">
          <columns>
             <TableColumn fx:id="colBookId" text="Book Id" />
             <TableColumn fx:id="colTitle" prefWidth="120.0" text="Title" />
@@ -33,41 +34,43 @@
             <URL value="@../../style/TableView.css" />
          </stylesheets>
       </TableView>
-      <ImageView fitHeight="317.0" fitWidth="263.0" layoutX="768.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+      <Text fill="#0a1747" layoutX="732.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#0a1747" layoutX="717.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <DatePicker layoutX="693.0" layoutY="220.0" prefWidth="150.0" />
+      <Button layoutX="719.0" layoutY="267.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
+      <Text fill="#0a1747" layoutX="928.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*" wrappingWidth="100.8033447265625">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="905.0" layoutY="150.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="938.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="906.0" layoutY="216.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Button layoutX="928.0" layoutY="270.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
+      <TextField layoutX="695.0" layoutY="151.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <ImageView fitHeight="339.0" fitWidth="341.0" layoutX="708.0" layoutY="285.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../assest/Frame%201.png" />
+            <Image url="@../../assest/image-removebg-preview.png" />
          </image>
       </ImageView>
-      <Text fill="#0a1747" layoutX="841.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
+      <TextField layoutX="695.0" layoutY="80.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Text fill="#0a1747" layoutX="721.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Email*" wrappingWidth="108.0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Text fill="#0a1747" layoutX="827.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Return Date*" wrappingWidth="120.13671875">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <DatePicker layoutX="803.0" layoutY="177.0" prefWidth="150.0" />
-      <Button layoutX="828.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Borrow" textFill="WHITE" />
-      <ImageView fitHeight="317.0" fitWidth="263.0" layoutX="770.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../assest/Frame%201.png" />
-         </image>
-      </ImageView>
-      <Text fill="#0a1747" layoutX="842.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id*" wrappingWidth="82.13671875">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <TextField layoutX="805.0" layoutY="395.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
-      <Text fill="#0a1747" layoutX="839.0" layoutY="454.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Id*" wrappingWidth="82.13671875">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </Text>
-      <TextField layoutX="807.0" layoutY="461.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
-      <Button layoutX="829.0" layoutY="501.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" styleClass="Crud-button" stylesheets="@../../style/CrudButtons.css" text="Return" textFill="WHITE" />
-      <TextField layoutX="804.0" layoutY="113.0" prefHeight="29.0" prefWidth="144.0" styleClass="text-field" stylesheets="@../../style/textField.css" />
+      <Line endY="280.0" layoutX="878.0" layoutY="48.0" startY="-30.66666603088379" />
    </children>
 </AnchorPane>
